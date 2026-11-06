@@ -1,0 +1,2626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>编程思维探险营 · 第一课 · 机器人的指令世界</title>
+<style>
+@font-face{font-family:'MaoBi';font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,d09GMgABAAAAAAmgAA4AAAAAD7AAAAlPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGx4cHgZgAFQRCAqVXI98Cw4AATYCJAMYBCAFhCAHIAwHG8wLI1KTfkimjtSFP3/+/e7N2SsnKTktS5aXwEkBAOye+uSWZzRKsst2kt18AvCui0c6HMsZwFsNClo+0O4BER5gf/+eTyvZD2D+YJJD/N5CWRLaVuG0uvs/l+NPd3p4zz/JKY3VGNs+NtYgKgujG1a0LPOAOQ04FfSWTvKrLmYxxmzWLlhYV159453sYJZjXKTZ9JdpMc9lf7G+ZgcwllGZexFjN4jnWA+z061TmZXNHmzBc7Tw4v33XXUFW8O6P/ky+2rzM8ayf1hvsSP78tbfmT+5bpaRNci6uei1RC7HLr19KDuYZViOdd/5+YOvvfTOJ1/uZjLn0Py18db4N99+7r89ZsKqt5jVbLIjyHugD4e6DgObnR3PHdrHm6PaDMswix2w+u/A9caPefmI7ccffXaHu/ODcOnMQTe5M0nazZ2Pq11tw+k9P91TueddWLj5nHBzmoYiXpgP0nvStI0WbThTbZpWm2yl7E/vHUk+oNBb2m6gPwJbLWG+h8h814hQUrF43ITPQV2tgYPpQBTxXegEzlBbZfkNi6e8mPlrzB7fi+ceC1BYlHAYcPTp07aCBU51F4fEJK4p6MDRQ5LSrtRWJ9bre4DDElvdQzK1AknzJSkenbsk4ubmycYN27cXi13DUvYnjj6BGpJSSY2nKLCTDRxEx2gLoqxVTlj9Al2FKErojnwvcIqstHHWxrXdiQvc7LDVZGtZ22rR1Ve7xoA/g8OyoOroeXpDP9gq4XUOerLcOhQMy4rcUbEsb2ELGnxF3QNz8JwaSSoH2rIuuqhYk/TT3WOVB8hDEWNLCZZUT9ZDr9TiKYEDLriAMs2HUwLRBYYRh+rVVzM/QS9G5hsOhSq0J7eu2VLQatJWVUmOzof5hYtPaASpThb0RxEHDsoKHK2toSK1nVIJbLWEg3K0OdEAcNccJzgIBB5x0MfrsqMroW4LSNauaJww29GSaucslkRtw+P5cEKg8YEDSjpnsRU4epUV1LxYIDJzLC8W+8aJuUfbi/qjgg4kydpdegNP+gHXEw6YD9N8eLIuSyKBI/4lIYcBYH4oKX2aYhGjQGAmKuh1rbpyDxGiwBJyMHNw8ebF3kIOJQ6RvSFSnDuaHA3umoSDpLbZwfrghEZqBU8QeVM3xR6iKIHAFbZaZgUXX6x32Yr0w4RLxUSR8iECByNKvG6rWa3TTxCKiRIHDks4JBzyC8+hPKEXC3RNQU9ziLkBgbQ4H04wv+4UqsB8DlisnZO2oMASB24Ky+5cEDGfgy/QNTKUdM9mSaGIw6XMr9uqUJ2+M4E5wPw7Ew48SpyASO4+Yf8Z8x2d9EOd+VGhWi7W0mtqlA+pa7xVL+Lw4QneyC7h+HXz5eNSU2OCMZUlSwRj08Lx67TuaWlpatcJlRHBMulx9e3uy5drh68Wrjc47MWz2/ueTYTzLpObFB7VZ6WC+2F1CU2aM0rJ1F7Kys9KBbHL2iyLgwpUiRfoCZgXDC8iSwS/WG0UH3q2nnzEQTZR4A34FBBiXZKpZh7AcQJkLtMO41bNgYb3ULPVKGaMQLU/O6msY7/ZEMfpyiEljoK7Ken6cGNaGi1X3q1B0ZlsEqHxkjPN7QaU/Yx762SYkjuWqMqzbZy0Bxs3ZwElI78NAwtVPBHkTetu/TGHRGAxjvc1XBuT0Lt6hr3sKZmmuCdBPlbb9OL77VP/YU5WG6mU207AYS7D1gLkkVs7quPxJ7qkd9fEkcoITEPbutJZtDu08PeKsuV+YT0mGwIb/TBmIOzxc4dMUvEVs6GDhof3uAJLjp5kHn65/oAdFIolGBlfB8tMQId1d3IrM6iRP1S9z6Aifunafas53G3FTTduepaQSgZJgfxCLZ2hFb0aP2Cqg/pu5UsLS8IShM5MaO6majqXeZ5O3/RUEo6HbzAmdZQylm0TSW+jn+KQe/c2DbpUEDZokgoOxD76EbXkUHO3WDvPrP7WnKrQrfCii6qnRl5iDFsm9aAbQYMd0bJQWrA0BFNHDs0cOMhkMDyih4+eIjmbvh8LVe6QcB34C0LWKtppGsVOWdmtk4SQ4LOurqiyj3UkYubYbOFtm1zMRbDznbYkNa1xoPcVRqcbYALO1usffHd6Z1uuPLvsZGu7LMV1q/pQU4Wse4GREYRTIIZaYch4HHmlxenMmVW88oOD1f0nn0KoNW45K0rTEZOJjWahEBgYLMfiodtULy2osGlk58ULiYn2la6PpBPVp2Sd0LDJZiLyERnwyZVpJCnFdeXdy005VIY7DUbbqwEbS0fJlcnNDm04aehcDKNWzk787MyFoEej53ZZ23sIiZgTDuZJ0dHvQiDD4lO7Wi/lchQ9vgn+/1o5pi1SxFeVkTqS1+SbO8uX42HBxQ8HUlKLHCDkaQJiDFP8nVppFOBPrGoDGUguia35OaXjXKFYsY5Nd6UgSml74iDYY/XmzZyiJycdYpZAkEDENjprueSNIQN9MqjjaWhQ1HzfOCCt3d01cjDIVSuMQ/ugqQAWH1DZYR7db/B6Sxxc5MjSsmQ4hy73xKkQjXm1aSnvOIeV57tk8eaPYYgJ4RKMOxpZJu4NcgcTuBSsOxz3qDPQGgCBpFnE4NgI9Vs4KcNgzFKJfWe90QzYE8yMGSN4bnZuds8ej0t7C0MBl7Tg8Ltn9iwnjZtE6kccUSQy516bjE6l3NMkcx7bg1J0LYoNX10WdR27Fvrm0izvXMHeBUvGz1tdirEK6VhvfIBve0hwSMxd8djHv2vN2YX5lUHPO1v31TYA8HjX7Z9dRVzULYY1//P38vr21Fdeq++fh45fVu+ThPD/W16/vXZ/CAHPf5D+U2kQwoUJr98jJi3y9frGsgzNMADj+WU+rHaZr2c64Wjw+Y2ov5qMP/I47B1A+UcPbx09SOQHehLKJxH5Zq6A3hRiRx8SmUNfcql1hwr3gBIrVoxYaKSMMgwgGXrk6NdjRYsKSekdCzJKMWBGQT8iRlEiQs8MyjZSUMIIkQIbWjiZmUCGGQuqeZzSqaSUcsqpGhtMFzfTRaH0if6fookZpumhi6a1Z+QWXM/bdWJyYUZF8m3I++wvp4J60hnrc0j6eul0hth6A2pkSEZRBzasrHxLxy2kk3+/IryqVicbYkqRYEBXM27AgAItspuvtlCGDpGgrsm4vQX/X0k+JZxRiVX71ENYufbeAQ==) format('woff2');}
+
+  :root{
+    --bg:#f9fcfe;
+    --bg-soft:#ebf3f9;
+    --card:#ffffff;
+    --line:#dfe6eb;
+    --line-2:#e4ecf3;
+    --ink:#0b1723;
+    --ink-2:#5b646f;
+    --muted:#5b646f;
+    --accent:#00a9e6;
+    --accent-2:#4fc9f0;
+    --accent-deep:#0089bd;
+    --accent-soft:#d8f0fc;
+    --ok:#23ba7d;
+    --ok-soft:#e6f8f0;
+    --warn:#ecaa0b;
+    --warn-soft:#fdf3e0;
+    --bad:#e62c2c;
+    --bad-soft:#fdecec;
+    --r-sm:8px;
+    --r-md:10px;
+    --r-lg:12px;
+    --r-xl:16px;
+    --sh-1:0 1px 2px rgba(11,23,35,.05), 0 12px 32px -22px rgba(11,23,35,.28);
+    --sh-2:0 2px 4px rgba(11,23,35,.06), 0 18px 40px -18px rgba(11,23,35,.32);
+    --sh-3:0 30px 70px -30px rgba(11,23,35,.35);
+    --rail:74px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Segoe UI",system-ui,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  /* ---------- 左侧竖栏 ---------- */
+  .rail{
+    position:fixed;left:0;top:0;bottom:0;width:var(--rail);z-index:80;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:blur(16px);
+    border-right:1px solid var(--line);
+    display:flex;flex-direction:column;align-items:center;
+    padding:18px 0;gap:6px;
+  }
+  .rail .logo{
+    width:48px;height:48px;border-radius:14px;margin-bottom:14px;padding:2px;box-sizing:border-box;
+    background:#fff;border:1px solid var(--line);
+    box-shadow:0 8px 18px -10px rgba(11,23,35,.35);
+    display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+    place-items:center;
+    font-family:'MaoBi','STXingkai','KaiTi',serif;
+    font-size:18px;line-height:1;color:#0b1723;
+    letter-spacing:0;
+  }
+  .rail .logo > span{display:block;transform:translateY(-.5px)}
+  .rail a{
+    position:relative;width:46px;height:46px;border-radius:13px;
+    display:flex;align-items:center;justify-content:center;
+    color:#9aabb9;transition:.25s var(--ease);
+  }
+  .rail a svg{width:21px;height:21px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .rail a:hover{color:var(--accent-deep);background:var(--accent-soft);transform:translateY(-2px)}
+  .rail a.on{color:var(--accent-deep);background:var(--accent-soft);box-shadow:inset 0 0 0 1px rgba(0,169,230,.18)}
+  .rail a.on::before{
+    content:"";position:absolute;left:-18px;top:12px;width:3px;height:22px;border-radius:0 3px 3px 0;
+    background:var(--accent);box-shadow:0 0 10px rgba(0,169,230,.6);
+  }
+  .rail a .tip{
+    position:absolute;left:56px;white-space:nowrap;font-size:12px;
+    background:var(--ink);color:#fff;padding:5px 10px;border-radius:8px;
+    opacity:0;transform:translateX(-6px);pointer-events:none;transition:.22s;
+  }
+  .rail a:hover .tip{opacity:1;transform:translateX(0)}
+
+  @media (max-width:900px){
+    .rail{
+      left:0;right:0;bottom:auto;top:0;width:100%;height:58px;
+      flex-direction:row;justify-content:flex-start;gap:4px;
+      padding:0 12px;overflow-x:auto;
+    }
+    .rail .logo{margin:0 10px 0 0;width:38px;height:38px;font-size:13px;padding:2px}
+    .rail a{width:42px;height:42px;flex:0 0 auto}
+    .rail a.on::before{left:50%;top:auto;bottom:-8px;transform:translateX(-50%);width:20px;height:3px;border-radius:3px 3px 0 0}
+    .rail a .tip{display:none}
+  }
+
+  .page{margin-left:var(--rail);display:flex;flex-direction:column;min-height:100vh}
+  @media (max-width:900px){.page{margin-left:0;padding-top:58px}}
+
+  /* ---------- 通用 ---------- */
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  .kicker{font-size:12px;letter-spacing:3px;color:var(--accent-deep);font-weight:800;text-transform:uppercase}
+  h2.sec-title{font-size:27px;font-weight:800;letter-spacing:-.3px;margin-top:8px;color:var(--ink)}
+  .u-line{
+    width:44px;height:4px;border-radius:4px;margin-top:14px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease) .15s;
+  }
+  .in .u-line{transform:scaleX(1)}
+  .sec-sub{color:var(--ink-2);margin-top:14px;max-width:64ch;font-size:15px}
+
+  .hero-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .hero-strip span{font-size:12.5px;color:var(--ink-2);background:rgba(255,255,255,.72);
+    border:1px solid var(--line);border-radius:999px;padding:5px 12px;backdrop-filter:blur(6px)}
+
+  /* ---------- 补充块的样式 ---------- */
+  .spec{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+  .spec>div{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--sh-1)}
+  .spec b{display:block;font-size:11px;letter-spacing:.2em;color:var(--muted);margin-bottom:5px}
+  .spec span{font-size:14px;color:var(--ink);line-height:1.65}
+  @media (max-width:900px){.spec{grid-template-columns:1fr 1fr}.end-grid{grid-template-columns:1fr!important}}
+
+  .mini{margin:10px 0 0;padding-left:17px;font-size:13.5px;color:var(--muted);line-height:1.85}
+  .mini li::marker{color:var(--accent)}
+  .mini b{color:var(--ink);font-weight:700}
+
+  .err{display:flex;gap:11px;padding:14px 16px;border-radius:var(--r-md);background:var(--card);
+    border:1px solid var(--line);box-shadow:var(--sh-1)}
+  .err .x{flex:none;width:22px;height:22px;border-radius:50%;background:var(--bad-soft);color:var(--bad);
+    font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .err h4{font-size:14px;margin-bottom:3px}
+  .err p{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+  .ck{list-style:none;display:grid;gap:10px;margin-top:6px}
+  .ck li{position:relative;padding-left:30px;font-size:14.5px;color:var(--ink-2)}
+  .ck li::before{content:"";position:absolute;left:0;top:3px;width:17px;height:17px;border-radius:5px;
+    border:1.6px solid var(--accent);background:#fff}
+
+  .note{background:var(--accent-soft);border-radius:var(--r-md);padding:16px 18px;font-size:14px;
+    color:#0a4a63;line-height:1.8}
+  .note b{color:#06354a}
+
+  .stack-demo{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+  .stack-col{display:flex;flex-direction:column;gap:6px}
+  .stack-card{background:#fff;border:1px solid var(--line-2);border-radius:8px;padding:8px 14px;
+    font-size:13px;font-weight:700;color:var(--ink-2);box-shadow:var(--sh-1);text-align:center}
+  .stack-card.hi{background:var(--accent);color:#fff;border-color:transparent}
+
+  /* ---------- 进场动画 ---------- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  /* ---------- 页面切换（一次只显示一页） ---------- */
+  .view{display:none}
+  .view.active{display:block;animation:viewIn .52s var(--ease) both}
+  @keyframes viewIn{
+    from{opacity:0;transform:translateY(16px) scale(.995);filter:blur(3px)}
+    to{opacity:1;transform:none;filter:blur(0)}
+  }
+
+  /* ---------- 首屏 ---------- */
+  .hero{position:relative;padding:78px 0 60px;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;right:-140px;top:-160px;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle at 40% 40%,rgba(0,169,230,.22),transparent 62%);
+    animation:floaty 12s ease-in-out infinite;
+  }
+  .hero::after{
+    content:"";position:absolute;left:-120px;bottom:-200px;width:440px;height:440px;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%,rgba(0,169,230,.14),transparent 65%);
+    animation:floaty 16s ease-in-out infinite reverse;
+  }
+  @keyframes floaty{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-18px,22px,0)}}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--accent-deep);
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;
+    box-shadow:var(--sh-1);
+  }
+  .dot-live{
+    width:7px;height:7px;border-radius:50%;background:var(--ok);position:relative;
+  }
+  .dot-live::after{
+    content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--ok);
+    animation:pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse{0%{transform:scale(.7);opacity:.9}70%{transform:scale(2.1);opacity:0}100%{opacity:0}}
+  h1{margin-top:20px;font-size:42px;line-height:1.26;letter-spacing:-1px;font-weight:800}
+  h1 .hl{color:var(--accent-deep)}
+  .hero p.lede{margin-top:18px;color:var(--ink-2);font-size:16px;max-width:48ch}
+  .meta{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+  .meta span{
+    font-size:13px;color:var(--ink-2);background:#fff;border:1px solid var(--line);
+    border-radius:10px;padding:8px 13px;box-shadow:var(--sh-1);
+  }
+  .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:12px;border:1px solid transparent;
+    font-family:inherit;font-size:14.5px;font-weight:700;cursor:pointer;
+    background:linear-gradient(160deg,var(--accent-2),var(--accent-deep));
+    color:#fff;box-shadow:0 8px 20px rgba(0,169,230,.28);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),filter .25s;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,169,230,.34);filter:brightness(1.03)}
+  .btn:active{transform:translateY(1px) scale(.985)}
+  .btn.ghost{
+    background:#fff;color:var(--ink-2);border-color:var(--line-2);box-shadow:var(--sh-1);
+  }
+  .btn.ghost:hover{color:var(--accent-deep);border-color:rgba(0,169,230,.35);box-shadow:var(--sh-2)}
+  .btn:disabled{opacity:.5;cursor:default;transform:none;box-shadow:none}
+
+  .hero-art{
+    position:relative;aspect-ratio:1/1;display:grid;place-items:center;
+    background:none;box-shadow:none;overflow:visible;
+    animation:floaty 9s ease-in-out infinite;
+  }
+  .hero-art::before{
+    content:"";position:absolute;inset:4%;border-radius:50%;
+    background:radial-gradient(circle at 46% 42%,rgba(11,23,35,.06),transparent 64%);
+    filter:blur(10px);pointer-events:none;
+  }
+  .brush-stack{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;z-index:2}
+  .brush-title{
+    font-family:'MaoBi','STXingkai','KaiTi',serif;
+    font-size:clamp(44px,7.2vw,88px);line-height:1.02;letter-spacing:.03em;
+    background:linear-gradient(168deg,#08121c 0%,#0d1f2d 46%,#2a4a60 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 10px 22px rgba(11,23,35,.14));
+    clip-path:inset(0 100% 0 0);
+    animation:inkWrite 1.5s cubic-bezier(.16,1,.3,1) .25s forwards;
+  }
+  @keyframes inkWrite{to{clip-path:inset(0 -6% 0 0)}}
+  .brush-rule{
+    width:84%;height:6px;border-radius:4px;
+    background:linear-gradient(90deg,transparent 0%,#0b1723 12%,#0b1723 86%,rgba(11,23,35,.2) 97%,transparent 100%);
+    opacity:1;transform:scaleX(0);transform-origin:left center;
+    animation:ruleGrow .9s cubic-bezier(.16,1,.3,1) 1.15s forwards;
+  }
+  @keyframes ruleGrow{to{transform:scaleX(1)}}
+  .brush-meta{
+    font-size:11.5px;letter-spacing:.34em;color:var(--muted);text-transform:uppercase;
+    opacity:0;animation:fadeUp .8s var(--ease) 1.5s forwards;
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .seal{
+    position:absolute;right:-4px;bottom:-34px;
+    writing-mode:vertical-rl;text-orientation:upright;
+    background:#c8321f;color:#fff5ef;font-size:12.5px;font-weight:700;
+    letter-spacing:.26em;padding:8px 5px;border-radius:3px;
+    font-family:'STKaiti','KaiTi',serif;
+    box-shadow:0 6px 16px -8px rgba(200,50,31,.7);
+    transform:rotate(-3deg);opacity:0;
+    animation:fadeUp .7s var(--ease) 1.9s forwards;
+  }
+
+  @media (max-width:900px){
+    .hero{padding-top:44px}
+    .hero-grid{grid-template-columns:1fr;gap:30px}
+    h1{font-size:30px}
+    .hero-art{max-width:320px;margin:0 auto}
+  }
+
+  /* ---------- 区块 ---------- */
+  section{padding:66px 0;scroll-margin-top:80px}
+  @media (max-width:900px){section{scroll-margin-top:70px}}
+  .sec-head{margin-bottom:32px}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media (max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.grid-3,.grid-4{grid-template-columns:1fr}}
+
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+    padding:22px;box-shadow:var(--sh-1);
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s;
+  }
+  .card:hover{transform:translateY(-7px);box-shadow:var(--sh-2);border-color:rgba(0,169,230,.28)}
+  .card .num{font-size:11.5px;letter-spacing:1.6px;font-weight:800;color:var(--accent-deep)}
+  .card h3{font-size:16.5px;font-weight:800;margin:9px 0 8px}
+  .card p{font-size:13.8px;color:var(--muted)}
+
+  /* ---------- 时间线 ---------- */
+  .timeline{position:relative;padding-left:34px}
+  .timeline::before{
+    content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;
+    background:linear-gradient(180deg,rgba(0,169,230,.5),rgba(0,169,230,.06));
+  }
+  .tl-item{position:relative;padding-bottom:26px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{
+    content:"";position:absolute;left:-30px;top:9px;width:12px;height:12px;border-radius:50%;
+    background:#fff;border:2.5px solid var(--accent);
+    box-shadow:0 0 0 4px rgba(0,169,230,.12);
+    transition:transform .5s var(--ease);
+  }
+  .tl-item:hover::before{transform:scale(1.35)}
+  .tl-date{font-size:11.5px;letter-spacing:1.4px;font-weight:800;color:var(--accent-deep)}
+  .tl-item h3{font-size:17px;font-weight:800;margin:5px 0}
+  .tl-item p{font-size:14px;color:var(--muted)}
+  .dur{
+    display:inline-block;font-size:11.5px;color:#8a6318;background:var(--warn-soft);
+    border-radius:999px;padding:1px 9px;margin-left:8px;vertical-align:2px;font-weight:700;
+  }
+
+  /* ---------- 角色 ---------- */
+  .roles{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  @media (max-width:900px){.roles{grid-template-columns:1fr 1fr}}
+  .role{
+    background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+    padding:16px;box-shadow:var(--sh-1);transition:transform .3s var(--ease),box-shadow .3s;
+  }
+  .role:hover{transform:translateY(-5px);box-shadow:var(--sh-2)}
+  .role b{display:block;font-size:14.5px}
+  .role span{font-size:11.5px;color:var(--accent-deep);font-weight:700}
+  .role p{font-size:12.8px;color:var(--muted);margin-top:7px}
+
+  /* ---------- 卡片说明 ---------- */
+  .cmds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:900px){.cmds{grid-template-columns:1fr}}
+  .cmd-group{
+    background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;
+    box-shadow:var(--sh-1);
+  }
+  .cmd-group h4{font-size:13px;color:var(--accent-deep);letter-spacing:1px;margin-bottom:12px}
+  .cmd{
+    display:inline-block;font-size:12.8px;background:var(--bg);border:1px solid var(--line-2);
+    border-radius:9px;padding:6px 11px;margin:0 6px 8px 0;color:var(--ink-2);
+    transition:.25s var(--ease);
+  }
+  .cmd:hover{background:var(--accent-soft);color:var(--accent-deep);border-color:rgba(0,169,230,.3);transform:translateY(-2px)}
+  .rules{list-style:none;margin-top:16px;display:grid;gap:9px}
+  .rules li{
+    position:relative;padding:11px 14px 11px 38px;background:#fff;border:1px solid var(--line);
+    border-radius:12px;font-size:14px;color:var(--ink-2);box-shadow:var(--sh-1);
+    transition:.28s var(--ease);
+  }
+  .rules li:hover{transform:translateX(4px);border-color:rgba(0,169,230,.28)}
+  .rules li::before{
+    content:"✓";position:absolute;left:13px;top:10px;width:18px;height:18px;border-radius:50%;
+    background:var(--accent-soft);color:var(--accent-deep);font-size:11px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  /* ---------- 游戏面板 ---------- */
+  .game{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);
+    padding:24px;box-shadow:var(--sh-1);margin-bottom:22px;
+    transition:box-shadow .4s var(--ease),transform .4s var(--ease);
+  }
+  .game:hover{box-shadow:var(--sh-2)}
+  .game-top{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+  .game-top h3{font-size:17px;font-weight:800}
+  .score{
+    font-size:13px;font-weight:700;color:var(--accent-deep);background:var(--accent-soft);
+    border-radius:999px;padding:6px 13px;
+  }
+  .feedback{margin-top:14px;font-size:13.5px;color:var(--muted);min-height:22px}
+  .game-foot{margin-top:16px;display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+
+  .tabs{position:relative;display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+  .tab{
+    position:relative;z-index:2;padding:9px 16px;border-radius:11px;border:1px solid var(--line);
+    background:#fff;font-family:inherit;font-size:13.5px;font-weight:700;color:var(--ink-2);
+    cursor:pointer;transition:.3s var(--ease);
+  }
+  .tab:hover{color:var(--accent-deep);border-color:rgba(0,169,230,.3);transform:translateY(-2px)}
+  .tab.on{
+    color:#fff;border-color:transparent;
+    background:linear-gradient(160deg,var(--accent-2),var(--accent-deep));
+    box-shadow:0 10px 22px rgba(0,169,230,.3);
+    transform:translateY(-2px) scale(1.02);
+  }
+
+  .play-grid{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start}
+  @media (max-width:900px){.play-grid{grid-template-columns:1fr}}
+
+  .board-wrap{overflow-x:auto;padding-bottom:4px;position:relative}
+
+  /* 通关判定 */
+  .verdict{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-size:92px;font-weight:900;pointer-events:none;opacity:0;
+    text-shadow:0 0 26px rgba(255,255,255,.95),0 12px 30px rgba(11,23,35,.18);z-index:20;
+  }
+  .verdict.show{animation:verdictPop .65s var(--ease) forwards}
+  .verdict.ok{color:#23ba7d}
+  .verdict.no{color:#e62c2c}
+  @keyframes verdictPop{
+    0%{opacity:0;transform:scale(.35)}
+    55%{opacity:1;transform:scale(1.16)}
+    100%{opacity:1;transform:scale(1)}
+  }
+
+  /* 循环夹 / 条件包 */
+  .block{border:1px solid rgba(0,169,230,.28);border-radius:var(--r-md);background:rgba(216,240,252,.35);padding:8px}
+  .block.on{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,169,230,.16)}
+  .block-head{
+    display:flex;align-items:center;gap:8px;font-size:12.8px;font-weight:700;color:var(--accent-deep);
+    padding:4px 6px;cursor:pointer;border-radius:8px;
+  }
+  .block-head:hover{background:rgba(255,255,255,.7)}
+  .block-head .grow{flex:1}
+  /* 循环次数：一体式小步进器 */
+  .cnt{display:inline-flex;align-items:center;height:24px;border:1px solid var(--line-2);border-radius:999px;
+    background:#fff;flex:none;overflow:hidden}
+  .cnt button{width:24px;height:24px;border:0;background:transparent;color:var(--accent-deep);font-family:inherit;
+    font-size:14px;line-height:1;cursor:pointer;padding:0;transition:background .18s}
+  .cnt button:hover{background:rgba(0,169,230,.13)}
+  .cnt button:active{background:rgba(0,169,230,.24)}
+  .cnt .n{min-width:20px;text-align:center;font-size:12.5px;font-weight:800;color:var(--ink);
+    font-variant-numeric:tabular-nums;padding:0 1px}
+  /* 卡片右上角的删除 */
+  .block-head .del{width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid transparent;border-radius:7px;background:transparent;color:#b3c4cf;font-family:inherit;
+    font-size:15px;line-height:1;cursor:pointer;flex:none;padding:0;transition:background .18s,color .18s,border-color .18s}
+  .block-head .del:hover{background:rgba(230,44,44,.09);border-color:rgba(230,44,44,.26);color:var(--bad)}
+  .block-body{display:flex;flex-direction:column;gap:6px;margin-top:6px;padding-left:10px;border-left:2px dashed rgba(0,169,230,.28)}
+  .block-body .empty.small{font-size:12px;color:#93a6b4;padding:6px 4px;text-align:left}
+  .target-bar{
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);
+    padding:0 2px 8px;
+  }
+  .target-bar b{color:var(--accent-deep)}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+  .dot-red{background:#e62c2c;box-shadow:0 0 8px rgba(230,44,44,.6)}
+  .dot-blue{background:#2f7fe0;box-shadow:0 0 8px rgba(47,127,224,.6)}
+  .if-block{background:rgba(216,240,252,.5)}
+  .if-block > .block-body > .block{background:rgba(255,255,255,.75)}
+  .target-bar .mini{width:auto;padding:0 8px;height:22px;font-size:12px;border-radius:7px;
+    border:1px solid var(--line-2);background:#fff;cursor:pointer;color:var(--ink-2)}
+  .board{
+    position:relative;display:grid;gap:var(--gap,3px);padding:12px;
+    background:linear-gradient(180deg,#f2f6f9,#e9f0f5);
+    border-radius:var(--r-lg);border:1px solid var(--line-2);
+  }
+  .cell{
+    width:50px;height:50px;border-radius:10px;background:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:17px;font-weight:800;color:#c3d2dd;
+    transition:transform .3s var(--ease),background .3s,color .3s;
+  }
+  .cell.obstacle{background:#fdecec;color:#d0605a}
+  .cell.goal{background:var(--ok-soft);color:#1f7a55}
+  .cell.treasure{background:var(--warn-soft);color:#a9761c}
+  .cell.checkpoint{background:#eaf1fd;color:#3a6cb5}
+  .cell.treasure.done{background:#fff;color:#d9e4ec;animation:pop .45s var(--ease)}
+  @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.22)}100%{transform:scale(1)}}
+
+  .robot{
+    position:absolute;border-radius:11px;
+    background:linear-gradient(160deg,#4fc9f0,#0089bd);
+    color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;
+    box-shadow:0 10px 22px rgba(0,137,189,.42);
+    transition:transform .32s var(--ease);
+    z-index:5;
+  }
+
+  .lightbox{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:13px;color:var(--muted)}
+  .lamp{width:16px;height:16px;border-radius:50%;background:#dfe7ec;transition:.3s}
+  .lamp.red{background:radial-gradient(circle at 35% 30%,#ff9a94,#e62c2c);box-shadow:0 0 14px rgba(230,44,44,.65)}
+  .lamp.blue{background:radial-gradient(circle at 35% 30%,#9fd4ff,#2f7fe0);box-shadow:0 0 14px rgba(47,127,224,.65)}
+
+  .panel h4{font-size:15.5px;font-weight:800}
+  .panel .rule{font-size:13.5px;color:var(--muted);margin:6px 0 16px}
+  .palette{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .pcard{
+    padding:10px 14px;border-radius:11px;border:1px solid var(--line-2);background:#fff;
+    font-family:inherit;font-size:13px;font-weight:700;color:var(--ink-2);cursor:pointer;
+    box-shadow:var(--sh-1);transition:.25s var(--ease);
+  }
+  .pcard:hover{transform:translateY(-2px);color:var(--accent-deep);border-color:rgba(0,169,230,.35);box-shadow:var(--sh-2)}
+  .pcard:active{transform:translateY(1px) scale(.98)}
+
+  .prog{
+    min-height:92px;border:1px dashed var(--line-2);border-radius:var(--r-md);
+    padding:12px;background:var(--bg);display:flex;flex-direction:column;gap:7px;margin-bottom:14px;
+  }
+  .prog .empty{font-size:12.5px;color:#a6b6c2;text-align:center;padding:14px 0}
+  .chip{
+    display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;
+    background:#fff;border:1px solid var(--line-2);font-size:13px;
+    animation:chipIn .35s var(--ease);
+  }
+  @keyframes chipIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+  .chip .idx{font-size:11px;font-weight:800;color:var(--accent);min-width:14px}
+  .chip .lab{flex:1}
+  .chip .mini{
+    width:22px;height:22px;border-radius:7px;border:1px solid var(--line-2);background:#fff;
+    color:var(--accent-deep);cursor:pointer;font-family:inherit;line-height:1;
+  }
+  .chip .del{border:none;background:none;color:var(--bad);cursor:pointer;font-size:15px;line-height:1}
+  .actions{display:flex;gap:10px;flex-wrap:wrap}
+
+  /* ---------- 连连看 ---------- */
+  .lnk-wrap{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
+  .lnk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;max-width:420px}
+  .lnk-cell{
+    aspect-ratio:1/1;border-radius:var(--r-md);border:1px solid var(--line-2);background:#fff;
+    font-family:inherit;font-size:12.8px;color:var(--ink-2);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:6px;
+    box-shadow:var(--sh-1);transition:.25s var(--ease);word-break:break-word;
+  }
+  .lnk-cell:hover{transform:translateY(-3px);box-shadow:var(--sh-2);color:var(--accent-deep)}
+  .lnk-cell.sel{
+    background:var(--accent-soft);border-color:var(--accent);color:var(--accent-deep);
+    box-shadow:0 0 0 3px rgba(0,169,230,.18);
+  }
+  .lnk-cell.gone{border:1px dashed var(--line-2);background:transparent;box-shadow:none;color:transparent;cursor:default}
+  .lnk-cell.bad{animation:shake .34s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+  .lnk-side{flex:1;min-width:230px;font-size:13.5px;color:var(--muted);display:grid;gap:8px}
+
+  /* ---------- 知识闯关 ---------- */
+  .bar{height:8px;background:var(--bg-soft);border-radius:999px;margin:16px 0 22px;overflow:hidden}
+  .bar > i{
+    display:block;height:100%;width:0;border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    transition:width 1s var(--ease);
+  }
+  .q{font-size:16.5px;font-weight:800;margin-bottom:16px}
+  .opts{display:grid;gap:10px}
+  .opt{
+    text-align:left;padding:14px 18px;border-radius:var(--r-md);border:1px solid var(--line-2);
+    background:#fff;font-family:inherit;font-size:14.5px;color:var(--ink);cursor:pointer;
+    box-shadow:var(--sh-1);transition:.25s var(--ease);
+  }
+  .opt:hover{transform:translateY(-2px);border-color:rgba(0,169,230,.35);box-shadow:var(--sh-2)}
+  .opt.right{background:var(--ok-soft);border-color:#a8e3c8;color:#1f7a55}
+  .opt.wrong{background:var(--bad-soft);border-color:#f3c8c5;color:#a4433f}
+  .opt:disabled{cursor:default;transform:none}
+
+  /* ---------- 结语 ---------- */
+  .final{text-align:center;padding:80px 0 90px}
+  .final h2{font-size:30px;font-weight:800;letter-spacing:-.5px}
+  .final p{color:var(--ink-2);margin-top:16px}
+  .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .badge{
+    padding:10px 18px;border-radius:999px;background:#fff;border:1px solid var(--line);
+    font-size:13.5px;font-weight:700;color:var(--ink-2);box-shadow:var(--sh-1);
+    transition:.3s var(--ease);
+  }
+  .badge:hover{transform:translateY(-3px);color:var(--accent-deep);border-color:rgba(0,169,230,.3);box-shadow:var(--sh-2)}
+
+  footer{border-top:1px solid var(--line);background:#fff;margin-top:auto}
+  .foot{
+    max-width:1080px;margin:0 auto;padding:26px;color:var(--muted);font-size:13px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+
+
+  /* ---------- 数字条 / 流程 / 小表 ---------- */
+  .statband{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+  .statband>div{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--sh-1);transition:transform .3s var(--ease),box-shadow .3s}
+  .statband>div:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+  .statband b{display:block;font-size:25px;font-weight:800;letter-spacing:-.6px;color:var(--accent-deep);line-height:1.2}
+  .statband span{font-size:12.5px;color:var(--muted);line-height:1.6}
+  @media (max-width:760px){.statband{grid-template-columns:1fr 1fr}}
+
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
+  .flow .fx{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 15px;box-shadow:var(--sh-1);transition:.3s var(--ease)}
+  .flow .fx:hover{transform:translateY(-4px);box-shadow:var(--sh-2);border-color:rgba(0,169,230,.28)}
+  .flow .fx b{font-size:13.5px;display:block}
+  .flow .fx p{font-size:12.5px;color:var(--muted);margin-top:5px;line-height:1.6}
+  .flow .fx::after{content:"→";position:absolute;right:-14px;top:50%;transform:translateY(-50%);color:#b9ccd8;font-weight:800;font-size:13px;line-height:1;z-index:2}
+  .flow .fx:last-child::after{display:none}
+  @media (max-width:860px){.flow{grid-template-columns:1fr 1fr}.flow .fx:nth-child(2)::after{display:none}}
+
+  .tbl-wrap{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-1)}
+  .mini-table{width:100%;border-collapse:collapse;font-size:13.5px}
+  .mini-table th,.mini-table td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line-2);vertical-align:top}
+  .mini-table th{font-size:11.5px;letter-spacing:1.4px;color:var(--muted);font-weight:800;background:linear-gradient(180deg,#fbfdfe,#f4f9fc)}
+  .mini-table td{color:var(--ink-2)}
+  .mini-table td b{color:var(--ink)}
+  .mini-table tbody tr:last-child td{border-bottom:none}
+  .mini-table tbody tr{transition:background .25s}
+  .mini-table tbody tr:hover{background:#f7fbfe}
+  @media (max-width:760px){.mini-table th:nth-child(4),.mini-table td:nth-child(4){display:none}}
+
+  /* ---------- 卡牌对战（游戏六） ---------- */
+  .bt-chips{display:flex;gap:8px;flex-wrap:wrap}
+  .bt-chip{font-size:12px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+  .bt-chip b{color:var(--accent-deep);font-variant-numeric:tabular-nums}
+
+  .bt-scene{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0 8px;align-items:end}
+  @media (max-width:780px){.bt-scene{grid-template-columns:1fr;gap:14px}}
+  .bt-col{display:flex;flex-direction:column;gap:12px;justify-content:flex-end}
+  .bt-col.right{justify-content:flex-start}
+
+  .bt-fighter{position:relative;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:14px 16px;box-shadow:var(--sh-1);transition:border-color .3s,box-shadow .3s}
+  .bt-fighter.me{border-color:#cfe6f5}
+  .bt-fighter.foe{border-color:#f3c8c5;flex-direction:row-reverse}
+  .bt-fighter.hit{animation:btShake .34s}
+  @keyframes btShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+
+  .bt-bot{position:relative;width:84px;height:84px;border-radius:24px;flex:none;background:linear-gradient(160deg,#8fe3fb,#0089bd);box-shadow:0 16px 28px -16px rgba(0,137,189,.85)}
+  .bt-bot::before,.bt-bot::after{content:"";position:absolute;top:33px;width:13px;height:13px;border-radius:50%;background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.28)}
+  .bt-bot::before{left:18px}
+  .bt-bot::after{right:18px}
+  .bt-bot .ant{position:absolute;left:50%;top:-14px;width:3px;height:14px;background:#0089bd;border-radius:2px;transform:translateX(-50%)}
+  .bt-bot .ant::after{content:"";position:absolute;left:50%;top:-9px;width:11px;height:11px;border-radius:50%;background:var(--warn);transform:translateX(-50%);box-shadow:0 0 12px rgba(236,170,11,.75)}
+
+  .bt-mob{position:relative;width:84px;height:84px;border-radius:50%;flex:none;background:radial-gradient(circle at 36% 30%,#ff9a94,#c9352f);box-shadow:0 16px 28px -16px rgba(201,53,47,.85)}
+  .bt-mob::before,.bt-mob::after{content:"";position:absolute;top:29px;width:15px;height:15px;border-radius:50%;background:#fff}
+  .bt-mob::before{left:18px}
+  .bt-mob::after{right:18px}
+  .bt-mob .ant{position:absolute;top:-12px;width:3px;height:14px;background:#c9352f;border-radius:2px}
+  .bt-mob .ant.l{left:25px;transform:rotate(-18deg)}
+  .bt-mob .ant.r{right:25px;transform:rotate(18deg)}
+  .bt-mob .ant::after{content:"";position:absolute;left:50%;top:-8px;width:9px;height:9px;border-radius:50%;background:#c9352f;transform:translateX(-50%)}
+
+  .bt-stat{flex:1;min-width:0}
+  .bt-name{font-size:13.5px;font-weight:800;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .bt-name em{font-style:normal;font-size:11px;font-weight:800;color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:1px 8px}
+  .bt-name em.atk{color:#a4433f;background:var(--bad-soft)}
+  .bt-hp{height:8px;border-radius:999px;background:var(--bg-soft);margin-top:8px;overflow:hidden}
+  .bt-hp>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#5fd6a4,#23ba7d);transition:width .5s var(--ease)}
+  .bt-hp.foe>i{background:linear-gradient(90deg,#f08a84,#e62c2c)}
+  .bt-hpnum{font-size:11.5px;color:var(--muted);margin-top:5px;font-variant-numeric:tabular-nums}
+  .bt-hpnum b{color:var(--ink);font-size:12.5px}
+
+  .bt-q{position:relative;background:#fff;border:1px solid var(--line);border-left:3px solid var(--bad);border-radius:var(--r-lg);padding:14px 16px;box-shadow:var(--sh-1);animation:btQIn .4s var(--ease)}
+  .bt-q::before{content:"";position:absolute;top:-7px;right:34px;width:12px;height:12px;background:#fff;border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+  @keyframes btQIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+  .bt-qhead{display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+  .bt-qtype{font-size:11px;font-weight:800;letter-spacing:1px;color:#a4433f;background:var(--bad-soft);border-radius:999px;padding:2px 9px}
+  .bt-qhint{font-size:11.5px;color:var(--muted)}
+  .bt-q p{font-size:14.5px;font-weight:700;line-height:1.7;color:var(--ink)}
+
+  .bt-hand{display:flex;gap:12px;flex-wrap:wrap;min-height:118px;margin:16px 0 6px;align-items:flex-start}
+  .anscard{position:relative;flex:1 1 150px;max-width:260px;min-height:100px;display:flex;flex-direction:column;gap:9px;text-align:left;font-family:inherit;background:#fff;border:1px solid var(--line-2);border-radius:12px;box-shadow:var(--sh-1);padding:13px 14px;cursor:pointer;transition:transform .22s var(--ease),box-shadow .22s var(--ease),border-color .22s,background .22s}
+  .anscard:hover{transform:translateY(-6px);box-shadow:var(--sh-2);border-color:rgba(0,169,230,.35)}
+  .anscard .key{align-self:flex-start;min-width:26px;height:24px;padding:0 7px;border-radius:8px;background:var(--accent-soft);color:var(--accent-deep);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .anscard .txt{font-size:13px;line-height:1.55;color:var(--ink)}
+  .anscard.judge{max-width:230px;min-height:88px}
+  .anscard.sel{border-color:var(--accent);background:#f2fbff;box-shadow:0 0 0 3px rgba(0,169,230,.18)}
+  .anscard.sel .key{background:var(--accent);color:#fff}
+  .anscard.right{border-color:#a8e3c8;background:var(--ok-soft)}
+  .anscard.right .key{background:var(--ok);color:#fff}
+  .anscard.wrong{border-color:#f3c8c5;background:var(--bad-soft)}
+  .anscard.wrong .key{background:var(--bad);color:#fff}
+  .anscard.dim{opacity:.45}
+  .bt-hand.locked .anscard{pointer-events:none}
+
+  .bt-foot{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:10px}
+  .bt-log{flex:1;min-width:220px;font-size:13px;color:var(--muted);min-height:22px;line-height:1.7}
+  .bt-log b{color:var(--accent-deep)}
+  .bt-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+  .bt-float{position:absolute;left:50%;top:44%;transform:translateX(-50%);font-size:23px;font-weight:900;color:var(--bad);pointer-events:none;animation:btFloat 1s var(--ease) forwards;text-shadow:0 2px 12px rgba(255,255,255,.95);z-index:20}
+  .bt-float.ok{color:var(--ok)}
+  @keyframes btFloat{0%{opacity:0;transform:translate(-50%,8px) scale(.8)}25%{opacity:1;transform:translate(-50%,-6px) scale(1.12)}100%{opacity:0;transform:translate(-50%,-46px) scale(1)}}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important}
+    .reveal{opacity:1;transform:none}
+    .brush-title{clip-path:none !important}
+    .brush-rule{transform:none !important}
+    .brush-meta,.seal{opacity:1 !important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 左侧竖栏 ============ -->
+<aside class="rail">
+  <div class="logo" title="和美山海" aria-label="和美山海"><span>山</span><span>和</span><span>海</span><span>美</span></div>
+
+  <a href="#top" class="on" data-sec="top" aria-label="首页">
+    <svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/></svg><span class="tip">首页</span>
+  </a>
+  <a href="#about" data-sec="about" aria-label="课程简介">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span class="tip">课程简介</span>
+  </a>
+  <a href="#skills" data-sec="skills" aria-label="四大本领">
+    <svg viewBox="0 0 24 24"><path d="M12 3l2.6 6.4L21 12l-6.4 2.6L12 21l-2.6-6.4L3 12l6.4-2.6z"/></svg><span class="tip">四大本领</span>
+  </a>
+  <a href="#map" data-sec="map" aria-label="探险地图">
+    <svg viewBox="0 0 24 24"><path d="M4 7l6-3 4 3 6-3v13l-6 3-4-3-6 3z"/></svg><span class="tip">探险地图</span>
+  </a>
+  <a href="#roles" data-sec="roles" aria-label="五个角色">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6"/></svg><span class="tip">五个角色</span>
+  </a>
+  <a href="#cards" data-sec="cards" aria-label="指令卡片">
+    <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2.5"/><path d="M8 20h8"/></svg><span class="tip">指令卡片</span>
+  </a>
+  <a href="#play" data-sec="play" aria-label="闯关游戏">
+    <svg viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5z"/></svg><span class="tip">闯关游戏</span>
+  </a>
+  <a href="#end" data-sec="end" aria-label="结语">
+    <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span class="tip">结语</span>
+  </a>
+</aside>
+
+<div class="page" id="top">
+
+  <!-- ============ 首屏 ============ -->
+  <div class="view hero active" data-view="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="reveal">
+          <span class="pill"><span class="dot-live"></span>2026 · 线下研学课程 · 第一课</span>
+          <h1>今天我们不碰电脑，<br>用几张卡片，学会<span class="hl">编程思维</span>。</h1>
+          <p class="lede">
+            面向 7–12 岁小学生的线下研学课。用实体指令卡片和地面十字点阵，
+            让孩子自己扮演机器人，把“顺序、循环、条件、拆解”四条路亲手走一遍。
+          </p>
+          <div class="meta">
+            <span>机器人的指令世界</span>
+            <span>全程约 180 分钟</span>
+            <span>四关递进</span>
+          </div>
+          <div class="cta">
+            <button class="btn" onclick="showView('play')">先闯一关</button>
+            <button class="btn ghost" onclick="showView('map')">看探险地图</button>
+          </div>
+
+          <div class="hero-strip reveal">
+            <span>① 组队热身 15′</span>
+            <span>② 人体机器人 30′</span>
+            <span>③ 循环挑战 30′</span>
+            <span>④ 红绿灯 45′</span>
+            <span>⑤ 寻宝 45′</span>
+            <span>⑥ 复盘 15′</span>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <div class="brush-stack">
+            <div class="brush-title">和美山海</div>
+            <div class="brush-rule"></div>
+            <div class="brush-meta">Coding Camp · 第一课</div>
+            <div class="seal">研学</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="statband reveal">
+        <div><b>180</b><span>分钟，一节课闯完四关</span></div>
+        <div><b>4</b><span>样本领：顺序 / 循环 / 条件 / 拆解</span></div>
+        <div><b>5</b><span>人一组，五个角色轮着当</span></div>
+        <div><b>0</b><span>行代码，不用电脑也能上</span></div>
+      </div>
+
+      <div class="grid-3" style="margin-top:24px">
+        <article class="card reveal">
+          <div class="num">这一课不做什么</div>
+          <h3>不教软件，不背语法</h3>
+          <p>不讲“机器人是什么”，也不打开任何编程软件。要带走的是算法思维本身：一件事怎么拆开、怎么排队、怎么重复、怎么按情况选。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">这一课怎么做</div>
+          <h3>让身体先跑一遍</h3>
+          <p>地上贴十字点阵，一沓塑封指令卡，老师手里两块红蓝灯牌。孩子排卡，孩子当机器人，走错了当场喊停、当场调试。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">这一课留下什么</div>
+          <h3>一张学习单，一个问题</h3>
+          <p>学完带走学习单、贴纸卡和评价量表；还带走一个没答案的问题——为什么程序非得写得这么死板。</p>
+        </article>
+      </div>
+
+      <div class="note reveal" style="margin-top:22px">
+        <b>一句话说清这堂课：</b>先把“顺序、循环、条件、拆解”四件事用脚步走一遍，等真见到代码那天，它就不再是一串神秘的符号。
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 课程简介 ============ -->
+  <section id="about" class="view" data-view="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">About</div>
+        <h2 class="sec-title">这是一节什么样的课</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">不讲代码，不碰电脑。孩子先当“机器人”，再当“程序员”，用身体把程序跑一遍。</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card reveal">
+          <div class="num">01 · 面向谁</div>
+          <h3>7–12 岁的小学生</h3>
+          <p>每组固定 5 人，五个角色分工合作。每闯一关换一次角色，人人都能当程序员，也都得老老实实当一回机器人。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">02 · 怎么做</div>
+          <h3>卡片点阵，不插电</h3>
+          <p>实体指令卡片 + 地面十字点阵。卡片竖向堆叠，从上到下执行；机器人不看路、不听劝，只照卡片走。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">03 · 学到什么</div>
+          <h3>四样本领带回教室</h3>
+          <p>顺序执行、循环打包、条件判断、拆解与抽象。四关闯完，再看代码就不陌生了。</p>
+        </article>
+      </div>
+
+      <div class="spec">
+        <div class="reveal"><b>对象</b><span>7–12 岁小学生</span></div>
+        <div class="reveal"><b>人数</b><span>每组 5 人，一次 4–6 组</span></div>
+        <div class="reveal"><b>时长</b><span>约 180 分钟，分六段</span></div>
+        <div class="reveal"><b>场地</b><span>空教室或走廊，点阵至少 6×8 格</span></div>
+        <div class="reveal"><b>材料</b><span>指令卡片、循环夹、红蓝灯牌、路障贴</span></div>
+        <div class="reveal"><b>形式</b><span>不插电，全程用身体在地面走</span></div>
+      </div>
+
+      <div class="grid-3" style="margin-top:22px">
+        <article class="card reveal">
+          <div class="num">目标 01</div>
+          <h3>先让身体懂</h3>
+          <p>不先讲概念，先让人走一遍。走顺了，再回头说“这就叫顺序执行”。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">目标 02</div>
+          <h3>卡住才是学习点</h3>
+          <p>机器人走错不是失败，是发现了 bug。找出来、换掉、再跑一次，调试就发生在这里。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">目标 03</div>
+          <h3>带一个问题回去</h3>
+          <p>为什么程序必须写得这么死板？这个问题带回家，下节课再拿出来。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 四大本领 ============ -->
+  <section id="skills" class="view" data-view="skills">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Four skills</div>
+        <h2 class="sec-title">今天要带走的四样本领</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">每一关对应一样本领。四样都摸过一遍，才算是走过一趟。</p>
+      </div>
+
+      <div class="grid-4">
+        <article class="card reveal">
+          <div class="num">Skill 01</div>
+          <h3>顺序 · 顺序执行</h3>
+          <p>卡片从上到下，一张接一张执行。顺序换一下，结果就变了。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">Skill 02</div>
+          <h3>循环 · 重复打包</h3>
+          <p>把重复的动作打包，封面写清楚重复几次。一夹顶数张。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">Skill 03</div>
+          <h3>条件 · 看情况选</h3>
+          <p>蓝灯前进一格，红灯后退一格。另一个包备着，但不执行。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">Skill 04</div>
+          <h3>拆解 · 大事化小</h3>
+          <p>大任务想不出来，就拆成小任务。路边的干扰，学会忽略。</p>
+        </article>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:44px;margin-bottom:18px">
+        <h2 class="sec-title" style="font-size:20px">这四样，生活里到处都是</h2>
+        <div class="u-line"></div>
+      </div>
+
+      <div class="grid-4">
+        <article class="card reveal">
+          <div class="num">生活里</div>
+          <h3>穿衣服</h3>
+          <p>先穿衣、再刷牙、再洗脸。顺序一乱，就能闹笑话。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">生活里</div>
+          <h3>跳绳 100 次</h3>
+          <p>没人会想 100 遍“跳”，只会说“重复跳 100 次”。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">生活里</div>
+          <h3>下雨带伞</h3>
+          <p>下雨就带，不下雨就不带。这就是“如果……就……”。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">生活里</div>
+          <h3>做一顿饭</h3>
+          <p>洗菜、切菜、炒菜。大任务一拆，就变成三小步。</p>
+        </article>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:44px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">四样本领，是怎么串起来的</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub" style="margin-top:12px">它们不是四个孤立的知识点。顺序是地基，循环是省力气，条件是会看情况，拆解是把前三样合起来用。</p>
+      </div>
+
+      <div class="flow reveal">
+        <div class="fx"><b>① 顺序</b><p>一条一条执行，先来后到，换一下就变结果。</p></div>
+        <div class="fx"><b>② 循环</b><p>重复的打包，写清次数，一夹顶数张。</p></div>
+        <div class="fx"><b>③ 条件</b><p>看信号，二选一，另一条路留着不走。</p></div>
+        <div class="fx"><b>④ 拆解</b><p>三样一起用，把大任务拆成小任务。</p></div>
+      </div>
+
+      <div class="tbl-wrap reveal" style="margin-top:26px">
+        <table class="mini-table">
+          <thead>
+            <tr><th>本领</th><th>哪一关</th><th>课上那句话</th><th>生活里的影子</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><b>顺序</b></td><td>人体机器人</td><td>卡片从上到下，一张接一张。</td><td>先穿衣，再刷牙</td></tr>
+            <tr><td><b>循环</b></td><td>循环挑战</td><td>一夹顶数张，封面写清楚次数。</td><td>跳绳一百下</td></tr>
+            <tr><td><b>条件</b></td><td>红绿灯</td><td>蓝灯进一格，红灯退一格。</td><td>下雨就带伞</td></tr>
+            <tr><td><b>拆解</b></td><td>寻宝大挑战</td><td>大任务拆成三小段，一段一段做。</td><td>洗菜、切菜、炒菜</td></tr>
+            <tr><td><b>调试</b></td><td>贯穿四关</td><td>找出那张错的卡，换掉，再来一次。</td><td>写完作业回头对一遍</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3" style="margin-top:22px">
+        <article class="card reveal">
+          <div class="num">为什么先教顺序</div>
+          <h3>因为它最不像“聪明事”</h3>
+          <p>顺序执行笨得没什么可讲，可少了它，后面三样都不成立。孩子第一次发现“顺序换了，结果全变”，就是从笨里看见规则。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">为什么接着教循环</div>
+          <h3>因为它最省力气</h3>
+          <p>八张“前进一格”太啰嗦，一夹子打包就够。省下来的不是卡片，是脑子——孩子第一次尝到“抽象”的甜头。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">为什么最后教拆解</div>
+          <h3>因为它得靠前三样撑着</h3>
+          <p>寻宝那一关，光会拆还不够，得知道哪一段该循环、哪一段该看灯。拆解不是新的知识，是把会的东西排好队。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 探险地图 ============ -->
+  <section id="map" class="view" data-view="map">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Adventure map</div>
+        <h2 class="sec-title">今天的探险地图</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">六段，约 180 分钟。每闯过一关，孩子就多带走一样本领。</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 01 <span class="dur">15 分钟</span></div>
+          <h3>组队热身</h3>
+          <p>认识伙伴、分好角色，先玩一个“我说你做”。机器人不会自己思考，它只会照指令一条一条执行。</p>
+          <ul class="mini">
+            <li>五人一组，认领<b>五个角色</b></li>
+            <li>玩一轮“<b>我说你做</b>”：拍手两下、举左手</li>
+            <li>先说好一句规矩：<b>机器人不看路</b></li>
+          </ul>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 02 <span class="dur">30 分钟</span></div>
+          <h3>人体机器人</h3>
+          <p>用卡片给机器人排路线，从起点走到终点。走错了就找 bug、换卡片——这个过程叫“调试”。</p>
+          <ul class="mini">
+            <li>任务一：<b>直线前进</b>，数清用了几张卡</li>
+            <li>任务二：<b>绕过路障</b>，正前方不能直走</li>
+            <li>走错了别慌，<b>找出那张错的卡</b>换掉</li>
+          </ul>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 03 <span class="dur">30 分钟</span></div>
+          <h3>循环挑战</h3>
+          <p>请出循环夹。把一组动作夹进去，标签上写次数。合上夹子是一条指令，打开是一整组动作。</p>
+          <ul class="mini">
+            <li>先排<b>笨办法</b>：一张一张来</li>
+            <li>再把它们<b>装进循环夹</b>，写次数</li>
+            <li>次数写多写少，机器人停的地方都不一样</li>
+          </ul>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 04 <span class="dur">45 分钟</span></div>
+          <h3>红绿灯</h3>
+          <p>走到检查点必须停下，看灯再选包。蓝灯前进一格，红灯后退一格，这就是“如果……就……”。</p>
+          <ul class="mini">
+            <li>检查点上<b>双脚站定</b>，只看一次灯</li>
+            <li><b>红灯包、蓝灯包</b>都要提前装好</li>
+            <li>另一个包不用，但<b>也不能空着</b></li>
+          </ul>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 05 <span class="dur">45 分钟</span></div>
+          <h3>寻宝大挑战</h3>
+          <p>找齐四个宝藏，避开路障。把一个大任务拆成三小段：一段用顺序，一段用条件，一段用循环。</p>
+          <ul class="mini">
+            <li><b>四个宝藏</b>一个都不能漏</li>
+            <li>中间<b>经过检查点</b>，停下看灯</li>
+            <li>最后才走到终点，顺序不能反</li>
+          </ul>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-date">PART 06 <span class="dur">15 分钟</span></div>
+          <h3>复盘总结</h3>
+          <p>一起回顾四样本领。下一节课，我们让电脑也听你的话。</p>
+          <ul class="mini">
+            <li>说说<b>哪一关最难</b>，难在哪儿</li>
+            <li>比一比，谁的<b>卡片最少</b></li>
+            <li>想一想，<b>换你会怎么改</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 五个角色 ============ -->
+  <section id="roles" class="view" data-view="roles">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Your team</div>
+        <h2 class="sec-title">组建你的探险小队</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">每组五人，五个角色。每闯一关换一次，没人一直当同一个。</p>
+      </div>
+
+      <div class="roles">
+        <div class="role reveal"><b>操作员</b><span>机器人</span><p>你就是机器人，不看路，只听卡片。</p></div>
+        <div class="role reveal"><b>卡片搭建员</b><span>程序员</span><p>给机器人排卡片，把想走的路一张张排出来。</p></div>
+        <div class="role reveal"><b>观察员</b><span>找 bug</span><p>盯着机器人走，一走错就喊停。</p></div>
+        <div class="role reveal"><b>记录员</b><span>小史官</span><p>数一数用了几张卡片，记下来。</p></div>
+        <div class="role reveal"><b>卡片搭建员</b><span>打包小帮手</span><p>把要重复的卡片，一包包整理好。</p></div>
+      </div>
+
+      <div class="note reveal" style="margin-top:24px">
+        <b>一条死规矩：</b>操作员不许偷看地图。看了，就不叫机器人了——机器人只认卡片。
+      </div>
+
+      <div class="grid-3" style="margin-top:20px">
+        <article class="card reveal">
+          <div class="num">怎么轮</div>
+          <h3>每关换一次</h3>
+          <p>闯完一关就往顺时针挪一格。五关下来，五个角色人人都当过一遍。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">人不够</div>
+          <h3>四个或三个人</h3>
+          <p>四个人：观察员和记录员合并。三个人：操作员、搭建员、一人盯两件事。</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">老师站哪</div>
+          <h3>站在机器人背后</h3>
+          <p>不指挥、不喊方向。只在卡死五分钟之后，给一句提示，把问题还给他们。</p>
+        </article>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:44px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">角色怎么转起来</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub" style="margin-top:12px">每闯完一关，全组顺时针挪一格。五关走完，五个角色人人都当过一遍——没人能一直当“发号施令”的那个。</p>
+      </div>
+
+      <div class="flow reveal">
+        <div class="fx"><b>① 操作员</b><p>当机器人，背对地图，只听卡片。</p></div>
+        <div class="fx"><b>② 搭建员</b><p>把路线排成卡，一张一张摞好。</p></div>
+        <div class="fx"><b>③ 观察员</b><p>盯着脚底下，一走偏就喊停。</p></div>
+        <div class="fx"><b>④ 记录员</b><p>数卡片、记方案，一会儿上台讲。</p></div>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:44px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">场上还有五个大人</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub" style="margin-top:12px">各管一摊，谁也别抢谁的活。人一乱，课就散。</p>
+      </div>
+
+      <div class="tbl-wrap reveal">
+        <table class="mini-table">
+          <thead><tr><th>角色</th><th>谁</th><th>管什么</th></tr></thead>
+          <tbody>
+            <tr><td><b>主讲</b></td><td>张子晗</td><td>讲课、引入概念、把控全场节奏</td></tr>
+            <tr><td><b>设备与安全</b></td><td>刘华强</td><td>点阵贴、灯牌、场地与用电安全</td></tr>
+            <tr><td><b>学生管理</b></td><td>夏沛锦</td><td>分组、举灯、收反馈</td></tr>
+            <tr><td><b>物料与影像</b></td><td>王佳腾</td><td>卡片清点、拍摄记录、计时提醒</td></tr>
+            <tr><td><b>统筹</b></td><td>杜文源</td><td>环节衔接、突发处理、收尾复盘</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-3" style="margin-top:22px">
+        <div class="err reveal">
+          <span class="x">?</span>
+          <div><h4>有人抢着当程序员</h4><p>不用劝，直接说“这一关你当机器人，下一关换你排卡”。轮转是规矩，不是商量。</p></div>
+        </div>
+        <div class="err reveal">
+          <span class="x">?</span>
+          <div><h4>机器人偷看地图</h4><p>让他背对地图重来一次。规则一松，整节课就变成“大家一起指挥一个人走路”，什么也学不到。</p></div>
+        </div>
+        <div class="err reveal">
+          <span class="x">?</span>
+          <div><h4>卡住五分钟还没动</h4><p>给一句提示就停：“你们是不是少了一张转向卡？”把问题还给他们，别替他们找出答案。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 指令卡片 ============ -->
+  <section id="cards" class="view" data-view="cards">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Command cards</div>
+        <h2 class="sec-title">认识指令卡片</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">卡片竖向堆叠，从上到下依次执行。一张卡，就是一步动作。</p>
+      </div>
+
+      <div class="cmds">
+        <div class="cmd-group reveal">
+          <h4>移动卡</h4>
+          <span class="cmd">前进 1 格</span><span class="cmd">前进 2 格</span>
+          <span class="cmd">前进 3 格</span><span class="cmd">……</span>
+        </div>
+        <div class="cmd-group reveal">
+          <h4>转向卡</h4>
+          <span class="cmd">左转 90°</span><span class="cmd">右转 90°</span><span class="cmd">原地转身</span>
+        </div>
+        <div class="cmd-group reveal">
+          <h4>循环夹 · 条件卡</h4>
+          <span class="cmd">夹住一组动作</span><span class="cmd">标签写循环次数</span><span class="cmd">红灯退，蓝灯进</span>
+        </div>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:36px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">地图上的规矩</h2>
+        <div class="u-line"></div>
+      </div>
+      <ul class="rules">
+        <li class="reveal">十字贴纸铺成网格，每一步都一样长。</li>
+        <li class="reveal">脚必须踩在十字上，不许跨点走。</li>
+        <li class="reveal">只在原地转向，一次 90°。</li>
+        <li class="reveal">红色 × 是路障，不能碰到，也不能跨过。</li>
+        <li class="reveal">这样每个人走的一步都一样长，路线才不会乱。</li>
+      </ul>
+
+      <div class="sec-head reveal" style="margin-top:40px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">卡片怎么排队</h2>
+        <div class="u-line"></div>
+      </div>
+
+      <div class="stack-demo reveal">
+        <div class="stack-col">
+          <div class="stack-card hi">1 · 前进 2 格</div>
+          <div class="stack-card hi">2 · 右转 90°</div>
+          <div class="stack-card hi">3 · 前进 1 格</div>
+        </div>
+        <div style="flex:1;min-width:240px">
+          <ul class="mini" style="margin-top:0">
+            <li>卡片<b>竖向堆叠</b>，从上往下读</li>
+            <li>不看最下面那张，先看最上面那张</li>
+            <li>顺序换一下，路线就整个变了</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:40px;margin-bottom:16px">
+        <h2 class="sec-title" style="font-size:20px">最容易犯的三个错</h2>
+        <div class="u-line"></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="err reveal">
+          <span class="x">×</span>
+          <div><h4>该用一张，拆成两张</h4><p>“前进 2 格”分成两张“前进 1 格”。路线没错，但卡片白多一张。</p></div>
+        </div>
+        <div class="err reveal">
+          <span class="x">×</span>
+          <div><h4>循环次数多一格</h4><p>走得到，但会越过终点才停下。次数要数准。</p></div>
+        </div>
+        <div class="err reveal">
+          <span class="x">×</span>
+          <div><h4>忘了转身</h4><p>机器人一直往前撞，撞到路障才发现少了一张转向卡。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 闯关游戏 ============ -->
+  <section id="play" class="view" data-view="play">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="kicker">Play</div>
+        <h2 class="sec-title">七个任务，一格一格走</h2>
+        <div class="u-line"></div>
+        <p class="sec-sub">课上用卡片和脚步，这里用鼠标。格子、路障、检查点都照课上的地图摆，点卡片排程序，点执行看机器人走。走错了就调试——改一张卡，再来一次。往下还有连连看、知识闯关，和一个会出题的怪物——它问什么，你就用什么卡回答。</p>
+      </div>
+
+      <div class="game reveal">
+        <div class="tabs" id="lvTabs"></div>
+
+        <div class="play-grid">
+          <div>
+            <div class="board-wrap">
+              <div class="board" id="board"></div>
+              <div class="verdict" id="verdict"></div>
+            </div>
+            <div class="lightbox">
+              <span>检查点信号</span>
+              <span class="lamp" id="lamp"></span>
+              <span id="lampText">还没有经过检查点</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h4 id="lvName">第一关</h4>
+            <p class="rule" id="lvRule"></p>
+
+            <div class="palette" id="palette"></div>
+            <div class="prog" id="prog"></div>
+
+            <div class="actions">
+              <button class="btn" id="runBtn">执行程序</button>
+              <button class="btn ghost" id="clearBtn">清空卡片</button>
+            </div>
+            <div class="feedback" id="runState">点上面的卡片，给机器人排一条路。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game reveal">
+        <div class="game-top">
+          <h3>游戏五 · 知识点连连看</h3>
+          <div class="score">连成 <span id="lnkScore">0</span> / 8</div>
+        </div>
+        <div class="lnk-wrap">
+          <div class="lnk-grid" id="lnkGrid"></div>
+          <div class="lnk-side">
+            <p>把词和它的解释配成一对，两张一起消失。</p>
+            <p>点错了会自动弹回来，接着点就行。</p>
+            <p style="color:var(--accent-deep)">八对里，装着今天四关的全部知识点。</p>
+            <div><button class="btn ghost" id="lnkRestart">重排一局</button></div>
+            <div class="feedback" id="lnkState"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game reveal">
+        <div class="game-top">
+          <h3 id="quizTitle">知识闯关 · 第 1 / 5 题</h3>
+          <div class="score">得分 <span id="quizScore">0</span></div>
+        </div>
+        <div class="bar"><i id="quizBar"></i></div>
+        <div class="q" id="quizQ">题目加载中……</div>
+        <div class="opts" id="quizOpts"></div>
+        <div class="feedback" id="quizFb"></div>
+        <div class="game-foot">
+          <button class="btn ghost" id="quizRestart" style="display:none">再来一遍</button>
+        </div>
+      </div>
+
+      <div class="game reveal" id="btGame">
+        <div class="game-top">
+          <h3>游戏六 · 卡牌对战 · 怪物出题</h3>
+          <div class="bt-chips">
+            <span class="bt-chip">第 <b id="btStage">1</b> / 3 关</span>
+            <span class="bt-chip">思考力 <b id="btEnergy">3</b> / 3</span>
+            <span class="bt-chip">连对 <b id="btStreak">0</b></span>
+          </div>
+        </div>
+        <p class="rule">怪物在右边出题，你在下面挑一张卡回答。答对就打它一下，答错自己挨一下。判断、单选、多选三种题型都会遇到——今天课上讲过的每一个知识点，它都可能问。</p>
+
+        <div class="bt-scene">
+          <div class="bt-col">
+            <div class="bt-fighter me" id="btPlayer">
+              <div class="bt-bot" id="btBotFace"><span class="ant"></span></div>
+              <div class="bt-stat">
+                <div class="bt-name">小机器人 <em id="btBlock" style="display:none">格挡 0</em></div>
+                <div class="bt-hp"><i id="btHpBar" style="width:100%"></i></div>
+                <div class="bt-hpnum"><b id="btHp">60</b> / <span id="btHpMax">60</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bt-col right">
+            <div class="bt-fighter foe" id="btFoe">
+              <div class="bt-mob"><span class="ant l"></span><span class="ant r"></span></div>
+              <div class="bt-stat">
+                <div class="bt-name"><span id="btFoeName">bug 虫</span> <em class="atk" id="btIntent">攻击 8</em></div>
+                <div class="bt-hp foe"><i id="btFoeBar" style="width:100%"></i></div>
+                <div class="bt-hpnum"><b id="btFoeHp">26</b> / <span id="btFoeMax">26</span></div>
+              </div>
+            </div>
+
+            <div class="bt-q" id="btQ">
+              <div class="bt-qhead">
+                <span class="bt-qtype" id="btQType">判断题</span>
+                <span class="bt-qhint" id="btQHint">从下面选一张卡</span>
+              </div>
+              <p id="btQText">题目加载中……</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bt-hand" id="btHand"></div>
+
+        <div class="bt-foot">
+          <div class="bt-log" id="btLog">开始吧，先看看 bug 虫想问什么。</div>
+          <div class="bt-actions">
+            <button class="btn ghost" id="btSubmit" style="display:none">提交答案</button>
+            <button class="btn" id="btEndTurn">结束回合</button>
+            <button class="btn ghost" id="btRestart" style="display:none">重新来过</button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ============ 结语 ============ -->
+  <section id="end" class="final view" data-view="end">
+    <div class="wrap">
+      <h2 class="reveal">四关闯完，你已经是个小小程序员了</h2>
+      <p class="reveal">顺序、循环、条件、拆解——这四样本领你都摸过了。下节课，我们让电脑也听你的话。</p>
+      <div class="badges">
+        <span class="badge reveal">顺序 · 顺序执行</span>
+        <span class="badge reveal">循环 · 重复打包</span>
+        <span class="badge reveal">条件 · 看情况选</span>
+        <span class="badge reveal">拆解 · 大事化小</span>
+      </div>
+
+      <div class="grid-4" style="margin-top:44px;text-align:left">
+        <article class="card reveal">
+          <div class="num">想一想 01</div>
+          <h3>哪一关卡片最少</h3>
+          <p>同样走到终点，为什么有的组只用四张卡？少的那些藏在哪？</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">想一想 02</div>
+          <h3>多写一次会怎样</h3>
+          <p>循环 5 次刚好到，6 次会停在哪儿？多出来那一步谁负责？</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">想一想 03</div>
+          <h3>另一个包去哪了</h3>
+          <p>灯亮红的时候，蓝灯包一直躺在那儿。它算不算“没用上”？</p>
+        </article>
+        <article class="card reveal">
+          <div class="num">想一想 04</div>
+          <h3>再加一张卡</h3>
+          <p>如果让你造一张新卡片，你会让它做什么？为什么需要它？</p>
+        </article>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:36px;text-align:left"
+           class="end-grid">
+        <div class="card reveal">
+          <div class="num">学习清单</div>
+          <h3>这五条，你做到了几条</h3>
+          <ul class="ck">
+            <li>能按顺序读出自己排的卡片</li>
+            <li>能用循环夹把重复动作打包</li>
+            <li>能在检查点按灯选对包</li>
+            <li>能把大任务拆成三小段再动手</li>
+            <li>走错了会找 bug，而不是重排一遍</li>
+          </ul>
+        </div>
+        <div class="note reveal">
+          <b>带回家的三件事</b><br>
+          一，找一件“必须有顺序”的事，写下来。<br>
+          二，找一件“一直在重复”的事，说说重复了几次。<br>
+          三，找一件“要看情况”的事，写清楚“如果……就……”。<br><br>
+          下节课，我们把这些事翻译成电脑听得懂的话。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot">
+      <span>编程思维探险营 · 第一课 · 机器人的指令世界</span>
+      <span>海南大学 · 和美山海</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* =====================================================================
+   0. 进场动画 + 数字滚动 + 竖栏高亮
+   ===================================================================== */
+(function(){
+  const items = document.querySelectorAll('.reveal');
+  const groups = new Map();
+
+  items.forEach(el => {
+    const p = el.parentElement;
+    const i = groups.get(p) || 0;
+    el.style.transitionDelay = (i * 90) + 'ms';
+    groups.set(p, i + 1);
+  });
+
+  const VIEWS = [...document.querySelectorAll('.view')];
+  const RAIL = [...document.querySelectorAll('.rail a')];
+
+  function showView(name, push){
+    if (!document.querySelector('.view[data-view="' + name + '"]')) name = 'top';
+
+    VIEWS.forEach(v => v.classList.toggle('active', v.dataset.view === name));
+    RAIL.forEach(a => a.classList.toggle('on', a.dataset.sec === name));
+    window.scrollTo(0, 0);
+
+    const cur = document.querySelector('.view.active');
+    if (cur){
+      const list = [...cur.querySelectorAll('.reveal')];
+      list.forEach((el, i) => {
+        el.classList.remove('in');
+        el.style.transitionDelay = (i * 70) + 'ms';
+      });
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        list.forEach(el => el.classList.add('in'));
+      }));
+    }
+
+    if (push !== false) history.pushState({ view: name }, '', '#' + name);
+  }
+
+  window.showView = showView;
+
+  RAIL.forEach(a => a.addEventListener('click', e => {
+    e.preventDefault();
+    showView(a.dataset.sec);
+  }));
+
+  window.addEventListener('popstate', e => {
+    const name = (e.state && e.state.view) || (location.hash || '#top').slice(1);
+    showView(name, false);
+  });
+
+  showView((location.hash || '#top').slice(1), false);
+})();
+
+/* 数字滚动 */
+function countTo(el, to, ms){
+  const from = parseInt(el.textContent, 10) || 0;
+  if (from === to){ el.textContent = to; return; }
+  const t0 = performance.now();
+  function tick(now){
+    const p = Math.min(1, (now - t0) / (ms || 600));
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(from + (to - from) * eased);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+/* =====================================================================
+   1. 关卡数据
+   ===================================================================== */
+const LEVELS = [
+  {
+    key: 'L1',
+    tab: '一 · 直线前进',
+    name: '游戏一 · 任务一 · 直线前进',
+    rule: '把机器人从起点 X 送到终点 O，一条直线。只能排前进卡，数一数一共用了几张。',
+    cols: 5, rows: 6,
+    start: { x: 2, y: 5, dir: 3 },
+    goal: { x: 2, y: 0 },
+    obstacles: [],
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180']
+  },
+  {
+    key: 'L2',
+    tab: '一 · 绕过路障',
+    name: '游戏一 · 任务二 · 绕过路障',
+    rule: '正前方有路障，不能碰、不能跨。转弯从旁边绕过去；排好卡片再执行，走错了就改。',
+    cols: 7, rows: 6,
+    start: { x: 3, y: 5, dir: 3 },
+    goal: { x: 3, y: 0 },
+    obstacles: [[3, 2], [0, 3], [6, 3]],
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180']
+  },
+  {
+    key: 'L3',
+    tab: '二 · 循环直线',
+    name: '游戏二 · 任务一 · 循环走直线',
+    rule: '先试笨办法：一张一张排「前进1格」。再用循环夹，把「前进1格」装进去，写上次数。',
+    cols: 5, rows: 8,
+    start: { x: 2, y: 7, dir: 3 },
+    goal: { x: 2, y: 0 },
+    obstacles: [],
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180', 'LOOP']
+  },
+  {
+    key: 'L4',
+    tab: '二 · 循环矩形',
+    name: '游戏二 · 任务二 · 循环绕矩形',
+    rule: '先向上 2 步，再向右 4 步，向下 4 步，最后向左 4 步，绕一圈回到终点。会重复的那几步，想想能不能打包。',
+    cols: 6, rows: 7,
+    start: { x: 0, y: 3, dir: 3 },
+    goal: { x: 0, y: 5 },
+    obstacles: [[0, 0], [5, 1], [4, 6]],
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180', 'LOOP']
+  },
+  {
+    key: 'L5',
+    tab: '三 · 检查点',
+    name: '游戏三 · 任务一 · 检查点选择',
+    rule: '路上必须经过检查点 ?。走到那儿停下看灯：红灯先强制后退一格，蓝灯先强制前进一格，然后才执行对应的包。另一个包用不上，只放在那里。',
+    cols: 5, rows: 7,
+    start: { x: 2, y: 6, dir: 3 },
+    goal: { x: 2, y: 0 },
+    obstacles: [],
+    checkpoint: { x: 2, y: 3 },
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180', 'IF']
+  },
+  {
+    key: 'L6',
+    tab: '三 · 绕行检查点',
+    name: '游戏三 · 任务二 · 绕行检查点',
+    rule: '先到检查点看灯，正前方三格路障不能直接走，得从两侧绕。红灯包、蓝灯包都要自己装。',
+    cols: 5, rows: 6,
+    start: { x: 2, y: 5, dir: 3 },
+    goal: { x: 2, y: 0 },
+    obstacles: [[1, 1], [2, 1], [3, 1]],
+    checkpoint: { x: 2, y: 3 },
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180', 'IF']
+  },
+  {
+    key: 'L7',
+    tab: '四 · 寻宝',
+    name: '游戏四 · 寻宝大挑战',
+    rule: '四个宝藏一个都不能漏，中间要经过检查点看灯，最后才到终点。把大任务拆成一小段一小段：哪段用顺序，哪段看灯，哪段能循环。',
+    cols: 7, rows: 8,
+    start: { x: 4, y: 7, dir: 3 },
+    goal: { x: 4, y: 0 },
+    obstacles: [[4, 1]],
+    treasures: [[0, 0], [6, 2], [0, 4], [6, 4]],
+    checkpoint: { x: 4, y: 3 },
+    palette: ['F1', 'F2', 'F3', 'L', 'R', 'B180', 'LOOP', 'IF']
+  }
+];
+
+const CARD = {
+  F1:   { label: '前进 1 格' },
+  F2:   { label: '前进 2 格' },
+  F3:   { label: '前进 3 格' },
+  B1:   { label: '后退 1 格' },
+  B180: { label: '转身 180°' },
+  L:    { label: '左转 90°' },
+  R:    { label: '右转 90°' },
+  LOOP: { label: '循环夹' },
+  IF:   { label: '条件卡' }
+};
+
+const CELL = 50, GAP = 3, PAD = 12;
+
+let lvIndex = 0;
+let lv = LEVELS[0];
+let robot = { x: 0, y: 0, dir: 0 };
+let program = [];
+let running = false;
+let runState = { light: null, cpUsed: false, got: new Set(), stopped: false, win: false };
+let target = { kind: 'main', ref: null };
+
+/* =====================================================================
+   2. 棋盘
+   ===================================================================== */
+const $board = document.getElementById('board');
+
+function buildTabs(){
+  const tabs = document.getElementById('lvTabs');
+  tabs.innerHTML = '';
+  LEVELS.forEach((L, i) => {
+    const b = document.createElement('button');
+    b.className = 'tab' + (i === lvIndex ? ' on' : '');
+    b.textContent = L.tab;
+    b.onclick = () => { if (!running && i !== lvIndex){ lvIndex = i; loadLevel(); } };
+    tabs.appendChild(b);
+  });
+}
+
+function loadLevel(){
+  lv = LEVELS[lvIndex];
+  program = [];
+  running = false;
+  target = { kind: 'main', ref: null };
+
+  buildTabs();
+  document.getElementById('lvName').textContent = lv.name;
+  document.getElementById('lvRule').textContent = lv.rule;
+
+  buildBoard();
+  resetRun();
+  buildPalette();
+  renderProgram();
+
+  document.getElementById('runState').textContent = '点上面的卡片，给机器人排一条路。';
+}
+
+function buildBoard(){
+  $board.innerHTML = '';
+  $board.style.gridTemplateColumns = 'repeat(' + lv.cols + ', 50px)';
+  $board.style.width = (lv.cols * CELL + (lv.cols - 1) * GAP + PAD * 2) + 'px';
+
+  for (let y = 0; y < lv.rows; y++){
+    for (let x = 0; x < lv.cols; x++){
+      const c = document.createElement('div');
+      c.className = 'cell';
+      c.dataset.x = x; c.dataset.y = y;
+
+      if (lv.obstacles.some(o => o[0] === x && o[1] === y)){ c.classList.add('obstacle'); c.textContent = '×'; }
+      if (lv.goal.x === x && lv.goal.y === y){ c.classList.add('goal'); c.textContent = '◎'; }
+      if (lv.treasures && lv.treasures.some(t => t[0] === x && t[1] === y)){ c.classList.add('treasure'); c.textContent = '✚'; }
+      if (lv.checkpoint && lv.checkpoint.x === x && lv.checkpoint.y === y){ c.classList.add('checkpoint'); c.textContent = '?'; }
+
+      $board.appendChild(c);
+    }
+  }
+
+  const rb = document.createElement('div');
+  rb.className = 'robot';
+  rb.id = 'robot';
+  rb.textContent = '➤';
+  $board.appendChild(rb);
+
+  placeRobot(lv.start.x, lv.start.y, lv.start.dir);
+}
+
+function cellEl(x, y){
+  return document.querySelector('.cell[data-x="' + x + '"][data-y="' + y + '"]');
+}
+
+function placeRobot(x, y, dir){
+  robot.x = x; robot.y = y; robot.dir = dir;
+  const rb = document.getElementById('robot');
+  if (!rb) return;
+  const px = PAD + x * (CELL + GAP);
+  const py = PAD + y * (CELL + GAP);
+  rb.style.width = CELL + 'px';
+  rb.style.height = CELL + 'px';
+  rb.style.transform = 'translate(' + px + 'px,' + py + 'px) rotate(' + (dir * 90) + 'deg)';
+}
+
+function resetRun(){
+  runState = { light: null, cpUsed: false, got: new Set(), stopped: false, win: false };
+  placeRobot(lv.start.x, lv.start.y, lv.start.dir);
+  document.querySelectorAll('.cell.treasure').forEach(c => c.classList.remove('done'));
+  const lamp = document.getElementById('lamp');
+  if (lamp) lamp.className = 'lamp';
+  document.getElementById('lampText').textContent = lv.checkpoint ? '还没有经过检查点' : '本关没有检查点';
+  const v = document.getElementById('verdict');
+  if (v) v.className = 'verdict';
+}
+
+/* =====================================================================
+   3. 卡片与程序（卡片可以相互套）
+   ===================================================================== */
+function makeCard(k){
+  if (k === 'LOOP') return { k: 'LOOP', n: 3, children: [] };
+  if (k === 'IF')   return { k: 'IF', red: [], blue: [] };
+  return { k: k };
+}
+
+function targetList(){
+  if (target.kind === 'loop' && target.ref) return target.ref.children;
+  if (target.kind === 'red'  && target.ref) return target.ref.red;
+  if (target.kind === 'blue' && target.ref) return target.ref.blue;
+  return program;
+}
+
+function targetName(){
+  return { main: '主程序', loop: '循环夹里', red: '红灯包', blue: '蓝灯包' }[target.kind] || '主程序';
+}
+
+function inProgram(ref){
+  let found = false;
+  (function walk(list){
+    list.forEach(c => {
+      if (c === ref) found = true;
+      if (c.k === 'LOOP') walk(c.children);
+      if (c.k === 'IF'){ walk(c.red); walk(c.blue); }
+    });
+  })(program);
+  return found;
+}
+
+function buildPalette(){
+  const box = document.getElementById('palette');
+  box.innerHTML = '';
+  lv.palette.forEach(k => {
+    const b = document.createElement('button');
+    b.className = 'pcard';
+    b.textContent = '+ ' + CARD[k].label;
+    b.onclick = () => {
+      if (running) return;
+      targetList().push(makeCard(k));
+      renderProgram();
+    };
+    box.appendChild(b);
+  });
+}
+
+function chipLabel(c){ return CARD[c.k] ? CARD[c.k].label : '卡片'; }
+
+function simpleChip(c, list, i){
+  const row = document.createElement('div');
+  row.className = 'chip';
+
+  const idx = document.createElement('span');
+  idx.className = 'idx';
+  idx.textContent = (i + 1);
+  row.appendChild(idx);
+
+  const lab = document.createElement('span');
+  lab.className = 'lab';
+  lab.textContent = chipLabel(c);
+  row.appendChild(lab);
+
+  const del = document.createElement('button');
+  del.className = 'del'; del.textContent = '×';
+  del.onclick = () => { if (running) return; list.splice(i, 1); renderProgram(); };
+  row.appendChild(del);
+
+  return row;
+}
+
+function delBtn(list, i){
+  const del = document.createElement('button');
+  del.className = 'del'; del.textContent = '×';
+  del.onclick = (e) => {
+    e.stopPropagation();
+    if (running) return;
+    const c = list[i];
+    list.splice(i, 1);
+    if (target.ref === c) target = { kind: 'main', ref: null };
+    renderProgram();
+  };
+  return del;
+}
+
+function loopBlock(c, list, i){
+  const blk = document.createElement('div');
+  blk.className = 'block';
+  if (target.kind === 'loop' && target.ref === c) blk.classList.add('on');
+
+  const head = document.createElement('div');
+  head.className = 'block-head';
+
+  const t = document.createElement('span');
+  t.className = 'grow';
+  t.textContent = '循环夹';
+  head.appendChild(t);
+
+  const cnt = document.createElement('span');
+  cnt.className = 'cnt';
+
+  const minus = document.createElement('button');
+  minus.type = 'button'; minus.textContent = '−'; minus.title = '少一次';
+  minus.onclick = (e) => { e.stopPropagation(); if (running) return; c.n = Math.max(1, c.n - 1); renderProgram(); };
+  cnt.appendChild(minus);
+
+  const num = document.createElement('span');
+  num.className = 'n'; num.textContent = c.n;
+  cnt.appendChild(num);
+
+  const plus = document.createElement('button');
+  plus.type = 'button'; plus.textContent = '+'; plus.title = '多一次';
+  plus.onclick = (e) => { e.stopPropagation(); if (running) return; c.n = Math.min(9, c.n + 1); renderProgram(); };
+  cnt.appendChild(plus);
+
+  head.appendChild(cnt);
+  head.appendChild(delBtn(list, i));
+  head.onclick = () => { if (running) return; target = { kind: 'loop', ref: c }; renderProgram(); };
+  blk.appendChild(head);
+
+  const body = document.createElement('div');
+  body.className = 'block-body';
+  if (!c.children.length){
+    body.innerHTML = '<div class="empty small">循环夹里还是空的，点上面的卡往里放。</div>';
+  }else{
+    renderList(c.children, body);
+  }
+  blk.appendChild(body);
+
+  return blk;
+}
+
+function pkgBlock(card, kind, title, list){
+  const blk = document.createElement('div');
+  blk.className = 'block';
+  if (target.kind === kind && target.ref === card) blk.classList.add('on');
+
+  const head = document.createElement('div');
+  head.className = 'block-head';
+  const dot = document.createElement('span');
+  dot.className = 'dot ' + (kind === 'red' ? 'dot-red' : 'dot-blue');
+  head.appendChild(dot);
+  const t = document.createElement('span');
+  t.className = 'grow';
+  t.textContent = title;
+  head.appendChild(t);
+  head.onclick = () => { if (running) return; target = { kind: kind, ref: card }; renderProgram(); };
+  blk.appendChild(head);
+
+  const body = document.createElement('div');
+  body.className = 'block-body';
+  if (!list.length){
+    body.innerHTML = '<div class="empty small">这个包是空的，点上面的卡往里放。</div>';
+  }else{
+    renderList(list, body);
+  }
+  blk.appendChild(body);
+
+  return blk;
+}
+
+function ifBlock(c, list, i){
+  const blk = document.createElement('div');
+  blk.className = 'block if-block';
+  if (target.ref === c) blk.classList.add('on');
+
+  const head = document.createElement('div');
+  head.className = 'block-head';
+  const t = document.createElement('span');
+  t.className = 'grow';
+  t.textContent = '条件卡 · 看灯选包';
+  head.appendChild(t);
+  head.appendChild(delBtn(list, i));
+  blk.appendChild(head);
+
+  const body = document.createElement('div');
+  body.className = 'block-body';
+  body.appendChild(pkgBlock(c, 'red',  '红灯包', c.red));
+  body.appendChild(pkgBlock(c, 'blue', '蓝灯包', c.blue));
+  blk.appendChild(body);
+
+  return blk;
+}
+
+function renderList(list, container){
+  list.forEach((c, i) => {
+    if (c.k === 'LOOP') container.appendChild(loopBlock(c, list, i));
+    else if (c.k === 'IF') container.appendChild(ifBlock(c, list, i));
+    else container.appendChild(simpleChip(c, list, i));
+  });
+}
+
+function renderProgram(){
+  const box = document.getElementById('prog');
+  box.innerHTML = '';
+
+  if (target.kind !== 'main' && (!target.ref || !inProgram(target.ref))){
+    target = { kind: 'main', ref: null };
+  }
+
+  const bar = document.createElement('div');
+  bar.className = 'target-bar';
+  const tip = document.createElement('span');
+  tip.innerHTML = '正在添加到：<b>' + targetName() + '</b>';
+  bar.appendChild(tip);
+  if (target.kind !== 'main'){
+    const back = document.createElement('button');
+    back.className = 'mini';
+    back.textContent = '回到主程序';
+    back.onclick = () => { if (running) return; target = { kind: 'main', ref: null }; renderProgram(); };
+    bar.appendChild(back);
+  }
+  box.appendChild(bar);
+
+  if (!program.length){
+    const e = document.createElement('div');
+    e.className = 'empty';
+    e.textContent = '还没有卡片。点上面的按钮，一张一张排。';
+    box.appendChild(e);
+    return;
+  }
+
+  renderList(program, box);
+}
+
+document.getElementById('clearBtn').onclick = () => {
+  if (running) return;
+  program = [];
+  target = { kind: 'main', ref: null };
+  renderProgram();
+  resetRun();
+  document.getElementById('runState').textContent = '清空了。再排一次。';
+};
+
+/* =====================================================================
+   4. 执行引擎
+   ===================================================================== */
+const DIRS = [[1, 0], [0, 1], [-1, 0], [0, -1]];
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function say(t){ document.getElementById('runState').textContent = t; }
+
+function blockedAt(x, y){
+  if (x < 0 || y < 0 || x >= lv.cols || y >= lv.rows) return 'wall';
+  if (lv.obstacles.some(o => o[0] === x && o[1] === y)) return 'obstacle';
+  return null;
+}
+
+function showVerdict(ok){
+  const v = document.getElementById('verdict');
+  if (!v) return;
+  v.textContent = ok ? '✓' : '✗';
+  v.className = 'verdict show ' + (ok ? 'ok' : 'no');
+}
+
+async function stepForward(){
+  if (runState.stopped) return false;
+
+  const d = DIRS[robot.dir];
+  const nx = robot.x + d[0], ny = robot.y + d[1];
+  const why = blockedAt(nx, ny);
+
+  if (why){
+    say(why === 'wall' ? '撞出地图了——看看是不是多排了一张卡。' : '撞上路障了——路障不能碰，得绕过去。');
+    runState.stopped = true;
+    return false;
+  }
+
+  placeRobot(nx, ny, robot.dir);
+  await sleep(290);
+
+  if (lv.treasures){
+    const hit = lv.treasures.find(t => t[0] === nx && t[1] === ny);
+    if (hit){
+      const key = nx + ',' + ny;
+      if (!runState.got.has(key)){
+        runState.got.add(key);
+        const ce = cellEl(nx, ny);
+        if (ce) ce.classList.add('done');
+        say('捡到一个宝藏，还差 ' + (lv.treasures.length - runState.got.size) + ' 个。');
+        await sleep(220);
+      }
+    }
+  }
+
+  if (lv.checkpoint && nx === lv.checkpoint.x && ny === lv.checkpoint.y && !runState.cpUsed){
+    runState.cpUsed = true;
+    runState.light = Math.random() < 0.5 ? 'red' : 'blue';
+    const isRed = runState.light === 'red';
+    const lamp = document.getElementById('lamp');
+    lamp.className = 'lamp ' + runState.light;
+    document.getElementById('lampText').textContent =
+      isRed ? '红灯亮了：先强制后退一格，再走红灯包' : '蓝灯亮了：先强制前进一格，再走蓝灯包';
+    say('到检查点了，停下看灯。');
+    await sleep(560);
+
+    // 灯自己先动一手，然后才轮到你写的包
+    const dd = DIRS[robot.dir];
+    const sign = isRed ? -1 : 1;
+    const fx = nx + dd[0] * sign, fy = ny + dd[1] * sign;
+    if (!blockedAt(fx, fy)){
+      placeRobot(fx, fy, robot.dir);
+      say(isRed ? '红灯：强制后退一格。' : '蓝灯：强制前进一格。');
+      await sleep(430);
+    }else{
+      say('灯要求的这一步被挡住了，原地没动。');
+      await sleep(380);
+    }
+  }
+
+  if (nx === lv.goal.x && ny === lv.goal.y){
+    if (lv.treasures && runState.got.size < lv.treasures.length){
+      say('到终点了，可宝藏还差 ' + (lv.treasures.length - runState.got.size) + ' 个。');
+      runState.stopped = true;
+      return false;
+    }
+    say('到终点了！这一关过了。');
+    runState.stopped = true;
+    runState.win = true;
+    return false;
+  }
+
+  return true;
+}
+
+async function stepBackward(){
+  if (runState.stopped) return false;
+
+  const d = DIRS[robot.dir];
+  const nx = robot.x - d[0], ny = robot.y - d[1];
+  const why = blockedAt(nx, ny);
+
+  if (why){
+    say('后退那一步被挡住了。');
+    runState.stopped = true;
+    return false;
+  }
+
+  placeRobot(nx, ny, robot.dir);
+  await sleep(290);
+  return true;
+}
+
+async function runList(list){
+  for (const c of list){
+    if (runState.stopped) return;
+    await runCard(c);
+  }
+}
+
+async function runCard(c){
+  if (runState.stopped) return;
+
+  if (c.k === 'F1' || c.k === 'F2' || c.k === 'F3'){
+    const n = { F1: 1, F2: 2, F3: 3 }[c.k];
+    for (let i = 0; i < n; i++){ if (!await stepForward()) return; }
+  }else if (c.k === 'B1'){
+    await stepBackward();
+  }else if (c.k === 'B180'){
+    robot.dir = (robot.dir + 2) % 4;
+    placeRobot(robot.x, robot.y, robot.dir);
+    await sleep(280);
+  }else if (c.k === 'L' || c.k === 'R'){
+    robot.dir = (robot.dir + (c.k === 'L' ? 3 : 1)) % 4;
+    placeRobot(robot.x, robot.y, robot.dir);
+    await sleep(240);
+  }else if (c.k === 'LOOP'){
+    if (!c.children.length){
+      say('循环夹是空的——里面得先装卡。');
+      await sleep(400);
+      return;
+    }
+    for (let i = 0; i < c.n; i++){
+      if (runState.stopped) return;
+      await runList(c.children);
+    }
+  }else if (c.k === 'IF'){
+    if (runState.light === null){
+      say('还没经过检查点，条件卡不知道走哪个包。');
+      await sleep(400);
+      return;
+    }
+    const isRed = runState.light === 'red';
+    const pkg = isRed ? c.red : c.blue;
+    say((isRed ? '红灯' : '蓝灯') + '——走' + (isRed ? '红灯包' : '蓝灯包') + '。');
+    await sleep(340);
+    if (!pkg.length){
+      say((isRed ? '红灯包' : '蓝灯包') + '是空的，这一步什么也没做。');
+      await sleep(400);
+      return;
+    }
+    await runList(pkg);
+  }
+}
+
+document.getElementById('runBtn').onclick = async () => {
+  if (running) return;
+  if (!program.length){ say('还没有卡片呢，先排几张。'); return; }
+
+  running = true;
+  document.getElementById('runBtn').disabled = true;
+  resetRun();
+  say('开始执行……');
+  await sleep(280);
+
+  await runList(program);
+
+  if (runState.win){
+    showVerdict(true);
+  }else{
+    showVerdict(false);
+    if (!runState.stopped) say('卡片走完了，但还没到终点。调一调再试。');
+  }
+
+  running = false;
+  document.getElementById('runBtn').disabled = false;
+};
+
+/* =====================================================================
+   5. 连连看（配对就消）
+   ===================================================================== */
+const PAIRS = [
+  { a: '顺序',     b: '从上到下执行' },
+  { a: '循环',     b: '重复打包' },
+  { a: '条件判断', b: '红灯退、蓝灯进' },
+  { a: '拆解',     b: '大任务拆小' },
+  { a: '调试',     b: '找出错卡改掉' },
+  { a: '循环夹',   b: '一夹顶数张' },
+  { a: '路障',     b: '红 × 不能踩' },
+  { a: 'bug',      b: '程序里的错误' }
+];
+
+let lnkSel = null;
+let lnkDone = 0;
+let lnkLock = false;
+
+function shuffle(a){
+  for (let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function lnkNew(){
+  lnkSel = null; lnkDone = 0; lnkLock = false;
+  countTo(document.getElementById('lnkScore'), 0, 300);
+  document.getElementById('lnkState').textContent = '';
+
+  const tiles = [];
+  PAIRS.forEach((p, i) => {
+    tiles.push({ id: i, text: p.a });
+    tiles.push({ id: i, text: p.b });
+  });
+  shuffle(tiles);
+
+  const grid = document.getElementById('lnkGrid');
+  grid.innerHTML = '';
+  tiles.forEach((t, i) => {
+    const b = document.createElement('button');
+    b.className = 'lnk-cell';
+    b.textContent = t.text;
+    b.dataset.id = t.id;
+    b.style.opacity = '0';
+    b.style.transform = 'translateY(10px)';
+    setTimeout(() => { b.style.transition = 'opacity .4s var(--ease), transform .4s var(--ease)'; b.style.opacity = '1'; b.style.transform = 'none'; }, 30 + i * 22);
+    b.addEventListener('click', () => lnkClick(b));
+    grid.appendChild(b);
+  });
+}
+
+function lnkClick(el){
+  if (lnkLock || el.classList.contains('gone')) return;
+
+  if (!lnkSel){
+    lnkSel = el;
+    el.classList.add('sel');
+    return;
+  }
+
+  if (lnkSel === el){
+    el.classList.remove('sel');
+    lnkSel = null;
+    return;
+  }
+
+  const first = lnkSel;
+
+  if (first.dataset.id === el.dataset.id){
+    first.classList.remove('sel');
+    first.classList.add('gone');
+    el.classList.add('gone');
+    first.disabled = true; el.disabled = true;
+    first.textContent = ''; el.textContent = '';
+    lnkSel = null;
+    lnkDone++;
+    countTo(document.getElementById('lnkScore'), lnkDone, 320);
+    document.getElementById('lnkState').textContent = '配上了！';
+    if (lnkDone === PAIRS.length){
+      document.getElementById('lnkState').textContent = '八对全连上了。四样本领，你手上有了。';
+    }
+    return;
+  }
+
+  lnkLock = true;
+  el.classList.add('bad');
+  first.classList.add('bad');
+  document.getElementById('lnkState').textContent = '这两张不是一对。';
+  setTimeout(() => {
+    el.classList.remove('bad');
+    first.classList.remove('bad', 'sel');
+    lnkSel = null;
+    lnkLock = false;
+  }, 360);
+}
+
+document.getElementById('lnkRestart').onclick = lnkNew;
+
+/* =====================================================================
+   6. 知识闯关
+   ===================================================================== */
+const QUIZ = [
+  {
+    q: '卡片要怎么排、怎么执行？',
+    o: ['随便排，机器人自己会看路', '竖向堆叠，从上到下依次执行', '横着摆一排，一起执行', '倒着排，从下往上执行'],
+    a: 1,
+    tip: '对，这就是“顺序执行”。'
+  },
+  {
+    q: '要让机器人重复做同一组动作，用什么？',
+    o: ['多画几张一样的卡', '循环夹：夹住动作，写上重复次数', '让机器人自己记住', '换一个更聪明的机器人'],
+    a: 1,
+    tip: '一夹顶数张，这就是循环。'
+  },
+  {
+    q: '走到检查点，灯是蓝灯，机器人该做什么？',
+    o: ['原地不动等老师喊', '后退一格', '前进一格', '退回起点'],
+    a: 2,
+    tip: '蓝灯前进一格，红灯后退一格——先看情况，再选动作，这就是条件判断。'
+  },
+  {
+    q: '程序员把程序里的错误叫什么？',
+    o: ['bug', 'bomb', 'bad', 'break'],
+    a: 0,
+    tip: 'bug 是虫子。找错、改错的过程叫调试，出错一点都不丢人。'
+  },
+  {
+    q: '寻宝任务太大想不出来，先做什么？',
+    o: ['直接放弃', '换个简单的任务', '把它拆成几个小任务', '先把路障全搬走'],
+    a: 2,
+    tip: '拆解：大事化小，一件一件做。'
+  }
+];
+
+let qi = 0, qScore = 0, qLocked = false;
+const $qTitle = document.getElementById('quizTitle');
+const $qQ = document.getElementById('quizQ');
+const $qOpts = document.getElementById('quizOpts');
+const $qScore = document.getElementById('quizScore');
+const $qBar = document.getElementById('quizBar');
+const $qFb = document.getElementById('quizFb');
+const $qRestart = document.getElementById('quizRestart');
+
+function quizStart(){
+  qi = 0; qScore = 0; qLocked = false;
+  countTo($qScore, 0, 300);
+  $qRestart.style.display = 'none';
+  $qBar.style.width = '0%';
+  quizRender();
+}
+
+function quizRender(){
+  qLocked = false;
+  const item = QUIZ[qi];
+  $qTitle.textContent = '知识闯关 · 第 ' + (qi + 1) + ' / ' + QUIZ.length + ' 题';
+  $qBar.style.width = (qi / QUIZ.length * 100) + '%';
+  $qQ.textContent = item.q;
+  $qFb.textContent = '';
+  $qOpts.innerHTML = '';
+
+  item.o.forEach((text, i) => {
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.textContent = text;
+    b.style.opacity = '0';
+    b.style.transform = 'translateY(8px)';
+    setTimeout(() => {
+      b.style.transition = 'opacity .4s var(--ease), transform .4s var(--ease)';
+      b.style.opacity = '1';
+      b.style.transform = 'none';
+    }, 40 + i * 60);
+    b.onclick = () => quizPick(i, b);
+    $qOpts.appendChild(b);
+  });
+}
+
+function quizPick(i, btn){
+  if (qLocked) return;
+  qLocked = true;
+
+  const item = QUIZ[qi];
+  const all = [...$qOpts.children];
+  all.forEach(b => b.disabled = true);
+
+  const next = () => { qi < QUIZ.length - 1 ? (qi++, quizRender()) : quizEnd(); };
+
+  if (i === item.a){
+    btn.classList.add('right');
+    qScore += 20;
+    countTo($qScore, qScore, 420);
+    $qFb.textContent = '✓ ' + item.tip;
+    setTimeout(next, 820);
+  }else{
+    btn.classList.add('wrong');
+    all[item.a].classList.add('right');
+    $qFb.textContent = '✗ 正确答案标出来了，记一下再进下一题。';
+    setTimeout(next, 1520);
+  }
+}
+
+function quizEnd(){
+  $qBar.style.width = '100%';
+  const msg = qScore >= 80
+    ? '全部答对！四样本领，你已经会讲了。'
+    : qScore >= 40
+      ? '答完了。漏掉几题，回头再看看探险地图。'
+      : '答完了，不过记住的不多——上面几节再翻翻？';
+
+  $qTitle.textContent = '闯关结束';
+  $qQ.textContent = msg;
+  $qOpts.innerHTML = '';
+  $qFb.textContent = '最终得分：' + qScore + ' / 100';
+  $qRestart.style.display = 'inline-block';
+}
+
+$qRestart.onclick = quizStart;
+
+
+/* =====================================================================
+   7. 卡牌对战（游戏六）· 怪物出题、卡牌作答
+   ===================================================================== */
+const BT_J = [
+  {q:'卡片要竖向堆叠，从上到下一张一张执行。', o:['对','错'], a:0, t:'顺序执行，就是从最上面一张开始，一条一条往下走。'},
+  {q:'机器人会自己看路，卡片排错了也能走到终点。', o:['对','错'], a:1, t:'机器人不会思考，卡片怎么排，它就怎么走。'},
+  {q:'三个"前进 1 格"和一张"前进 3 格"，走出来的距离是一样的。', o:['对','错'], a:0, t:'效果一样，但一张更简洁。卡片少，程序才好读。'},
+  {q:'同一个终点只有一种排法，别的走法都算错。', o:['对','错'], a:1, t:'能走到终点就是对的，只是卡片越少越漂亮。'},
+  {q:'程序里的错误，程序员叫它 bug。', o:['对','错'], a:0, t:'bug 原意是虫子，后来就成了"程序里的错"。'},
+  {q:'找错、改错这个过程，叫调试。', o:['对','错'], a:0, t:'调试不是挨罚，是真本事。出错一点都不丢人。'},
+  {q:'循环夹里只能夹一张卡片。', o:['对','错'], a:1, t:'一整组动作都能夹进去，左转加前进也能一起夹。'},
+  {q:'循环夹的封面上，要写清楚重复几次。', o:['对','错'], a:0, t:'不写次数，机器人不知道该做几遍。'},
+  {q:'循环写 4 次和写 5 次，机器人停的位置一样。', o:['对','错'], a:1, t:'4 次走不到，5 次刚好，6 次就冲过头了。'},
+  {q:'红灯包、蓝灯包都要提前准备好，灯亮哪个就用哪个。', o:['对','错'], a:0, t:'另一个包不执行，但也得先备着，不然没得选。'},
+  {q:'检查点亮红灯的时候，红灯包和蓝灯包会一起执行。', o:['对','错'], a:1, t:'只执行亮灯对应的那一个，另一个原地待着。'},
+  {q:'一关里的检查点可以反复生效，走一次就要看一次灯。', o:['对','错'], a:1, t:'检查点只生效一次。进阶挑战才会上两个检查点。'},
+  {q:'点阵上可以斜着走，只要别踩到路障就行。', o:['对','错'], a:1, t:'只能一格一格直着走，不许斜走、不许跨点。'},
+  {q:'转向都在原地转，一次转 90°。', o:['对','错'], a:0, t:'左转右转都是 90°，转身才是 180°。'},
+  {q:'红色的 × 是路障，不能碰到，也不能跨过去。', o:['对','错'], a:0, t:'碰上就算失败，只能绕。'},
+  {q:'大任务一下子想不出来，可以先拆成几个小任务。', o:['对','错'], a:0, t:'拆开以后，每一步都看得清，先做哪段后做哪段也好排。'},
+  {q:'拆任务的时候，路边跟宝藏无关的东西也要一起记下来。', o:['对','错'], a:1, t:'无关的就是干扰，要学会忽略，只抓关键信息。'},
+  {q:'组队时每个人从头到尾只做同一个角色，不用换。', o:['对','错'], a:1, t:'每闯过一关就换一次角色，人人都当过程序员。'},
+  {q:'没有检查点的程序，机器人每次走的路线都一样。', o:['对','错'], a:0, t:'程序是确定的。有了检查点，同一条路才可能走出不同动作。'},
+  {q:'卡片越少，程序越简洁，机器人执行得越快。', o:['对','错'], a:0, t:'同一个终点，卡片少的那版更好读、更好改。'}
+];
+const BT_S = [
+  {q:'要让机器人把同一组动作做五遍，最省卡片的是哪一种？', o:['前进 5 格','循环夹：把动作包起来，写 5 次','转身 180°','再排五张一模一样的'], a:1, t:'重复的动作打包起来，五张就变成一夹。'},
+  {q:'循环夹的封面上，必须写清楚什么？', o:['重复几次','卡片是什么颜色','是谁排的卡','一共用了几张卡'], a:0, t:'次数写不清，机器人不知道要做几遍。'},
+  {q:'从起点到终点一共 5 格，循环夹里放"前进 1 格"，要循环几次？', o:['3 次','4 次','5 次','6 次'], a:2, t:'走 5 格就循环 5 次。少一次走不到，多一次冲过头。'},
+  {q:'走到检查点，第一件要做的事是什么？', o:['继续往前走','双脚站定，停下来','先看看终点在哪','先换一个角色'], a:1, t:'先停、站定，再看灯。边看边走最容易走错。'},
+  {q:'检查点亮起蓝灯，机器人要做什么？', o:['前进一格','后退一格','原地转圈','退回起点'], a:0, t:'蓝灯进一格，红灯退一格，亮哪个用哪个包。'},
+  {q:'检查点亮起红灯，机器人要做什么？', o:['前进一格','后退一格','原地不动等老师','两个包各走一遍'], a:1, t:'红灯退一格，然后走红灯包。另一个包不执行。'},
+  {q:'程序里出了错，我们把这个错叫什么？', o:['bug','bomb','bad','break'], a:0, t:'bug 就是虫子，钻进程式里捣乱的错。'},
+  {q:'找出错的那张卡、换掉、再跑一遍，这个过程叫什么？', o:['编译','调试','重排','复盘'], a:1, t:'调试：找到那一张，换掉那一张。'},
+  {q:'卡片从上到下依次执行，这叫什么本领？', o:['顺序','循环','条件判断','拆解'], a:0, t:'一条一条往下走，这就是顺序。'},
+  {q:'机器人走错了，最该先做什么？', o:['骂机器人笨','找出是错在哪一张卡','把卡片全扔掉','重新分一次队'], a:1, t:'机器人只是照做，错在卡片。找到那一张，就赢了。'},
+  {q:'同一个终点，A 组用了 6 张卡，B 组用了 4 张卡，哪一种更好？', o:['6 张，稳妥','4 张，简洁又快','两种一样好','卡数多才显得厉害'], a:1, t:'能到终点的前提下，卡片越少越简洁。'},
+  {q:'地上那些十字贴纸是干什么用的？', o:['装饰好看','当网格，让每一步都一样长','记小组的分数','标记宝藏的位置'], a:1, t:'脚下有格子，每个人走的步长才一样，路线才不乱。'},
+  {q:'下面哪一张是转向卡？', o:['前进 2 格','右转 90°','循环 3 次','红灯包'], a:1, t:'前进是移动卡，左转、右转、转身才是转向卡。'},
+  {q:'寻宝那一关，一共要找齐几处宝藏？', o:['2 处','3 处','4 处','6 处'], a:2, t:'四个黄点，一个都不能漏，最后才到终点。'},
+  {q:'一个探险小队固定几个人？', o:['3 人','4 人','5 人','6 人'], a:2, t:'五个角色五个人，一关一换。'},
+  {q:'五个角色里，负责"盯着机器人走，一走错就喊停"的是谁？', o:['操作员','卡片搭建员','观察员','记录员'], a:2, t:'观察员找 bug，一走错立刻喊停，大家一起看哪张卡错了。'},
+  {q:'"如果下雨，就带伞"，这是哪样本领？', o:['顺序','循环','条件判断','拆解'], a:2, t:'看情况再决定做什么，这就是"如果……就……"。'},
+  {q:'"跳绳要跳 100 下"，对应哪样本领？', o:['顺序','循环','条件判断','拆解'], a:1, t:'重复跳 100 次，就是把动作打包、写清次数。'},
+  {q:'先让身体走一遍、再回头看代码，这样做的好处是什么？', o:['先记住身体的感觉，代码就不陌生了','可以先玩一会儿','可以少上几节课','可以不用排卡片'], a:0, t:'身体先懂，脑子再懂。等见到代码，它就不再是一串神秘符号。'}
+];
+const BT_M = [
+  {q:'今天学的四样本领是哪些？', o:['顺序','循环','条件判断','拆解与抽象','抄写课本'], a:[0,1,2,3], t:'顺序、循环、条件判断、拆解与抽象，四关一关一样。'},
+  {q:'下面哪些做法能让卡片变少？', o:['用循环夹把重复动作包起来','用"前进 3 格"代替三张"前进 1 格"','每一步都单独写一张"前进 1 格"','把不需要的转向卡也塞进程序'], a:[0,1], t:'打包和合并都是让程序变短，多余的动作要删掉。'},
+  {q:'走到检查点，正确的做法有哪些？', o:['双脚站定，停下来','只看一次灯','用亮灯对应的那个包','两个包都执行一遍'], a:[0,1,2], t:'停、看、选一个。两个包都走，就乱套了。'},
+  {q:'机器人走错了，可以怎么做？', o:['找出是错在哪一张卡','换掉那张卡，再跑一次','骂机器人太笨','把卡片全推倒，从头重排'], a:[0,1], t:'找到那一张、换掉那一张，这才叫调试。'},
+  {q:'关于"循环"，下面说法正确的是哪些？', o:['把重复的动作打包','要写清楚重复几次','循环夹里只能放一张卡','次数写错，停的位置就不对'], a:[0,1,3], t:'包得住、写得清次数，缺一样都不行。'},
+  {q:'关于"条件判断"，下面说法正确的是哪些？', o:['提前把两个包都准备好','灯亮哪个就用哪个','另一个包当场现排','这就是"如果……就……"'], a:[0,1,3], t:'两个包得先备好，灯一亮才有得选。'},
+  {q:'寻宝那一关，为什么要把大任务拆开？', o:['一次想不清整条路线','每一小段可以用不同的本领','拆开以后就不用检查了','出错时更容易找到是哪一段的问题'], a:[0,1,3], t:'拆开是为了每段都走得清楚，也更容易改。'},
+  {q:'地图上的规矩有哪些？', o:['脚必须踩在十字上','原地转向，一次 90°','不能斜着走、不能跨点走','路障可以直接跨过去'], a:[0,1,2], t:'步长一样、转向规整、路障绕开，路线才不会乱。'},
+  {q:'下面哪些属于"移动卡"？', o:['前进 1 格','前进 2 格','前进 3 格','左转 90°'], a:[0,1,2], t:'前进才是移动，左转右转都只是转向。'},
+  {q:'循环夹里可以装什么？', o:['一张"前进 1 格"','一整组动作','"左转 + 前进"这样的一串','必须装满十张'], a:[0,1,2], t:'一张行，一组也行。合上夹子是一条指令，打开是一整组动作。'},
+  {q:'探险小队里的角色有哪些？', o:['操作员（机器人）','卡片搭建员（程序员）','观察员（找 bug）','记录员（小史官）','裁判员（判输赢）'], a:[0,1,2,3], t:'还有一个"打包小帮手"，帮着把重复的卡整理好。'},
+  {q:'"人体机器人"这一关，正确的四步是什么？', o:['想路线','排卡片','执行','调试','背答案'], a:[0,1,2,3], t:'想、排、走、改，一圈下来就学会了。'},
+  {q:'生活里哪些事是"重复"？', o:['跳绳 100 下','操场跑一圈又一圈','时钟一格一格走','下雨了带伞'], a:[0,1,2], t:'重复的事不用一遍遍说，打包写次数就行。'},
+  {q:'生活里哪些事是"看情况做选择"？', o:['下雨就带伞','红灯停、绿灯行','考满分就奖励自己','每天都要吃饭'], a:[0,1,2], t:'先看情况，再决定做什么，这就是条件。'},
+  {q:'关于"拆解与抽象"，说法正确的是哪些？', o:['大问题拆成小问题','忽略跟目标无关的干扰','抓住最关键的信息','拆完就不用做计划了'], a:[0,1,2], t:'拆开是为了看清，看清了还要排先后。'},
+  {q:'做题、走路出了错，正确的态度是什么？', o:['出错一点都不丢人','找出来、改掉，就是进步','出错说明不适合学编程','换掉那张出错的卡再来一次'], a:[0,1,3], t:'出错是学习的一部分，找得到、改得掉，就是本事。'},
+  {q:'一个"好程序"应该具备什么？', o:['卡片尽量少','步骤清楚','能稳定走到终点','卡片越多越厉害'], a:[0,1,2], t:'少、清、稳，三样齐了就是好程序。'},
+  {q:'寻宝大挑战里，必须要做到的有哪些？', o:['四个宝藏一个都不能漏','经过检查点要停下看灯','避开红色的路障','可以跨过路障抄近路'], a:[0,1,2], t:'一个不漏、看灯选包、绕开路障，缺一个都不算通关。'},
+  {q:'"卡片就是编程积木"，这句话的意思是？', o:['一张卡就是一条指令','顺序不同，结果就不同','以后写代码也是这个道理','卡片只适合小孩玩'], a:[0,1,2], t:'今天摆卡片，明天写代码，想的是同一件事。'}
+];
+
+const BT_DMG = {judge:6, single:8, multi:12};
+const BT_LABEL = {judge:'判断题', single:'单选题', multi:'多选题'};
+const BT_PENALTY = 5;
+const BT_HP = 60, BT_ENERGY = 3;
+
+const BFOE = [
+  {n:'bug 虫', hp:26, atk:8,
+   plan:['judge','judge','single','judge','single','multi','judge','single'],
+   skin:'radial-gradient(circle at 36% 30%,#ff9a94,#c9352f)'},
+  {n:'路障怪', hp:40, atk:10,
+   plan:['single','judge','multi','single','judge','multi','single','judge'],
+   skin:'radial-gradient(circle at 36% 30%,#ffc078,#c9761f)'},
+  {n:'超时虫 · Boss', hp:62, atk:12,
+   plan:['multi','single','multi','judge','multi','single','multi','judge'],
+   skin:'radial-gradient(circle at 36% 30%,#b3a4ff,#4a2fbf)'}
+];
+
+/* 三类题库，各自洗牌成一摞，抽完再洗一次 */
+const btBags = {judge:[], single:[], multi:[]};
+function btRefill(k){
+  const bank = k === 'judge' ? BT_J : (k === 'single' ? BT_S : BT_M);
+  btBags[k] = bank.slice().sort(() => Math.random() - 0.5);
+}
+function btDraw(type){
+  if(!btBags[type] || !btBags[type].length) btRefill(type);
+  return Object.assign({type:type}, btBags[type].pop());
+}
+
+const btEl = id => document.getElementById(id);
+const btS = {stage:0, hp:BT_HP, hpMax:BT_HP, block:0, energy:BT_ENERGY,
+             foeHp:0, q:null, pool:[], picked:[], busy:false, streak:0, over:false};
+
+function btLog(msg){ btEl('btLog').innerHTML = msg; }
+
+function btPaint(){
+  const foe = BFOE[btS.stage];
+  btEl('btStage').textContent = btS.stage + 1;
+  btEl('btEnergy').textContent = btS.energy;
+  btEl('btStreak').textContent = btS.streak;
+  btEl('btHp').textContent = Math.max(0, btS.hp);
+  btEl('btHpMax').textContent = btS.hpMax;
+  btEl('btHpBar').style.width = Math.max(0, btS.hp) / btS.hpMax * 100 + '%';
+  btEl('btFoeName').textContent = foe.n;
+  btEl('btIntent').textContent = '攻击 ' + foe.atk;
+  btEl('btFoeHp').textContent = Math.max(0, btS.foeHp);
+  btEl('btFoeMax').textContent = foe.hp;
+  btEl('btFoeBar').style.width = Math.max(0, btS.foeHp) / foe.hp * 100 + '%';
+  const blk = btEl('btBlock');
+  if(btS.block > 0){ blk.style.display = ''; blk.textContent = '格挡 ' + btS.block; }
+  else { blk.style.display = 'none'; }
+}
+
+
+function btFloat(host, txt, ok){
+  const f = document.createElement('div');
+  f.className = 'bt-float' + (ok ? ' ok' : '');
+  f.textContent = txt;
+  host.appendChild(f);
+  setTimeout(() => f.remove(), 1050);
+}
+
+function btAsk(){
+  if(btS.over) return;
+  if(!btS.pool.length) btS.pool = BFOE[btS.stage].plan.slice();
+  const q = btS.q = btDraw(btS.pool.shift());
+  btS.picked = [];
+
+  btEl('btQType').textContent = BT_LABEL[q.type];
+  btEl('btQHint').textContent = q.type === 'multi' ? '这题不止一个对，选好了点"提交答案"' : '点下面一张卡，就是作答';
+  btEl('btQText').textContent = q.q;
+  const box = btEl('btQ');
+  box.style.animation = 'none'; void box.offsetWidth; box.style.animation = '';
+
+  const hand = btEl('btHand');
+  hand.className = 'bt-hand';
+  hand.innerHTML = '';
+  q.o.forEach((txt, i) => {
+    const b = document.createElement('button');
+    b.className = 'anscard' + (q.type === 'judge' ? ' judge' : '');
+    b.dataset.i = i;
+    const key = q.type === 'judge' ? txt : 'ABCD'[i];
+    const body = q.type === 'judge' ? (i === 0 ? '这句话说得对' : '这句话说得不对') : txt;
+    const k = document.createElement('span'); k.className = 'key'; k.textContent = key;
+    const t = document.createElement('span'); t.className = 'txt'; t.textContent = body;
+    b.appendChild(k); b.appendChild(t);
+    b.onclick = () => btPick(i);
+    hand.appendChild(b);
+  });
+  btEl('btSubmit').style.display = 'none';
+  btEl('btEndTurn').disabled = false;
+  btPaint();
+}
+
+function btPick(i){
+  if(btS.busy || btS.over || !btS.q) return;
+  const q = btS.q;
+  if(q.type !== 'multi'){ btAnswer(i); return; }
+  const at = btS.picked.indexOf(i);
+  if(at >= 0) btS.picked.splice(at, 1); else btS.picked.push(i);
+  btEl('btHand').querySelectorAll('.anscard').forEach((c, k) => {
+    c.classList.toggle('sel', btS.picked.includes(k));
+  });
+  btEl('btSubmit').style.display = btS.picked.length ? '' : 'none';
+}
+
+function btAnswer(ans){
+  const q = btS.q;
+  if(!q) return;
+  const picked = Array.isArray(ans) ? ans.slice() : [ans];
+  btS.busy = true;
+  btS.energy = Math.max(0, btS.energy - 1);
+
+  const right = q.type === 'multi'
+    ? (picked.length === q.a.length && q.a.every(i => picked.includes(i)))
+    : picked[0] === q.a;
+
+  btEl('btHand').querySelectorAll('.anscard').forEach((c, k) => {
+    const good = q.type === 'multi' ? q.a.includes(k) : k === q.a;
+    if(good) c.classList.add('right');
+    else if(picked.includes(k)) c.classList.add('wrong');
+    else c.classList.add('dim');
+  });
+  btEl('btHand').classList.add('locked');
+  btEl('btSubmit').style.display = 'none';
+
+  if(right){
+    btS.streak += 1;
+    const bonus = btS.streak % 3 === 0 ? 4 : 0;
+    btS.block += 2 + bonus;
+    const dmg = BT_DMG[q.type];
+    btS.foeHp -= dmg;
+    btFloat(btEl('btFoe'), '-' + dmg, true);
+    btEl('btFoe').classList.add('hit');
+    setTimeout(() => btEl('btFoe').classList.remove('hit'), 360);
+    btLog('答对了。<b>' + q.t + '</b> 打掉 ' + dmg + ' 点血' +
+          (bonus ? '，连对三题，格挡再加 ' + (2 + bonus) + '。' : '，格挡 +2。'));
+  } else {
+    btS.streak = 0;
+    let dmg = BT_PENALTY;
+    if(btS.block > 0){ const a = Math.min(btS.block, dmg); btS.block -= a; dmg -= a; }
+    btS.hp -= dmg;
+    btFloat(btEl('btPlayer'), dmg ? '-' + dmg : '格挡!', false);
+    btEl('btPlayer').classList.add('hit');
+    setTimeout(() => btEl('btPlayer').classList.remove('hit'), 360);
+    btLog('答错了。<b>' + q.t + '</b>' + (dmg ? '自己掉了 ' + dmg + ' 点血。' : '格挡刚好挡住。'));
+  }
+
+  btPaint();
+  setTimeout(() => {
+    btS.busy = false;
+    btEl('btHand').classList.remove('locked');
+    if(btS.foeHp <= 0){ btWinBattle(); return; }
+    if(btS.hp <= 0){ btLose(); return; }
+    if(btS.energy <= 0){
+      btEl('btQHint').textContent = '思考力用完了，点"结束回合"看它动手';
+      btEl('btHand').classList.add('locked');
+      btEl('btEndTurn').disabled = false;
+      return;
+    }
+    btAsk();
+  }, 1300);
+}
+
+function btEndTurn(){
+  if(btS.busy || btS.over) return;
+  btS.busy = true;
+  const foe = BFOE[btS.stage];
+  let dmg = foe.atk;
+  if(btS.block > 0){ const a = Math.min(btS.block, dmg); btS.block -= a; dmg -= a; }
+  btS.hp -= dmg;
+  btS.block = 0;
+  btS.streak = 0;
+  btS.energy = BT_ENERGY;
+  btFloat(btEl('btPlayer'), dmg ? '-' + dmg : '挡住了!', false);
+  btEl('btPlayer').classList.add('hit');
+  setTimeout(() => btEl('btPlayer').classList.remove('hit'), 360);
+  btLog(foe.n + ' 冲过来，' + (dmg ? '扣掉 ' + dmg + ' 点血' : '被你全挡下来了') +
+        '。新回合，思考力回到 ' + BT_ENERGY + '。');
+  btPaint();
+  setTimeout(() => {
+    btS.busy = false;
+    if(btS.hp <= 0){ btLose(); return; }
+    btAsk();
+  }, 950);
+}
+
+function btWinBattle(){
+  btS.stage += 1;
+  if(btS.stage >= BFOE.length){ btWin(); return; }
+  const foe = BFOE[btS.stage];
+  btS.foeHp = foe.hp;
+  btS.energy = BT_ENERGY;
+  btS.block = 0;
+  btS.pool = foe.plan.slice();
+  const mob = document.querySelector('#btFoe .bt-mob');
+  if(mob) mob.style.background = foe.skin;
+  btEl('btHand').innerHTML = '';
+  btEl('btHand').classList.remove('locked');
+  btLog('这一关过了！下一个是 <b>' + foe.n + '</b>，血量 ' + foe.hp + '，它更爱出多选。');
+  btAsk();
+}
+
+function btWin(){
+  btS.over = true;
+  btEl('btHand').innerHTML = '';
+  btEl('btQType').textContent = '通关';
+  btEl('btQHint').textContent = '三关全清';
+  btEl('btQText').textContent = '超时虫也倒下了。今天这四样本领，你是真会用了。';
+  btEl('btSubmit').style.display = 'none';
+  btEl('btEndTurn').style.display = 'none';
+  btEl('btRestart').style.display = '';
+  btLog('通关！剩 <b>' + Math.max(0, btS.hp) + '</b> 点血。要不要再来一局，看看能不能不掉血？');
+  btPaint();
+}
+
+function btLose(){
+  btS.over = true;
+  btEl('btHand').innerHTML = '';
+  btEl('btQType').textContent = '失败';
+  btEl('btQHint').textContent = '血归零了';
+  btEl('btQText').textContent = '被打倒了。回课堂看一眼四关的口诀，再来一次。';
+  btEl('btSubmit').style.display = 'none';
+  btEl('btEndTurn').style.display = 'none';
+  btEl('btRestart').style.display = '';
+  btLog('这一局输了，不丢人。错的那几题，笔记里就有答案。');
+  btPaint();
+}
+
+function btInit(){
+  btS.stage = 0;
+  btS.hp = btS.hpMax = BT_HP;
+  btS.block = 0;
+  btS.energy = BT_ENERGY;
+  btS.streak = 0;
+  btS.over = false;
+  btS.busy = false;
+  btS.q = null;
+  btS.picked = [];
+  const foe = BFOE[0];
+  btS.foeHp = foe.hp;
+  btS.pool = foe.plan.slice();
+  const mob = document.querySelector('#btFoe .bt-mob');
+  if(mob) mob.style.background = foe.skin;
+  btEl('btEndTurn').style.display = '';
+  btEl('btEndTurn').disabled = false;
+  btEl('btRestart').style.display = 'none';
+  btEl('btSubmit').style.display = 'none';
+  btLog('开始吧，先看看 bug 虫想问什么。');
+  btAsk();
+}
+
+btEl('btSubmit').onclick = () => {
+  if(!btS.busy && btS.q && btS.q.type === 'multi' && btS.picked.length) btAnswer(btS.picked);
+};
+btEl('btEndTurn').onclick = btEndTurn;
+btEl('btRestart').onclick = btInit;
+btInit();
+
+/* =====================================================================
+   启动
+   ===================================================================== */
+loadLevel();
+lnkNew();
+quizStart();
+btInit();
+</script>
+</body>
+</html>
